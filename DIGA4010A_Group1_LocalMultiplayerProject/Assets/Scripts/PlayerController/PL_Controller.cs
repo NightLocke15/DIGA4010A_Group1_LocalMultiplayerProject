@@ -125,8 +125,8 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Mouse"",
-                    ""id"": ""043956a8-4c56-48d9-b00f-f4c08277b92a"",
+                    ""name"": ""WASD"",
+                    ""id"": ""bcb90aa1-e409-4d4a-9278-5c32c73b5e5a"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -137,8 +137,8 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""deb2faaa-e491-4b22-93ea-7415b92abdaf"",
-                    ""path"": ""<Mouse>/delta/up"",
+                    ""id"": ""66428e98-5a90-4fd6-8aa9-c23137c96506"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
@@ -148,8 +148,8 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""93eeaa2c-0680-482f-a897-8281e2a04f86"",
-                    ""path"": ""<Mouse>/delta/down"",
+                    ""id"": ""00bad9a5-dc61-4c1a-8457-ac42d7b8c8d6"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
@@ -159,8 +159,8 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""80d1e414-468b-46f5-a1f2-7484eab89fd0"",
-                    ""path"": ""<Mouse>/delta/left"",
+                    ""id"": ""d7d0da8b-578f-476a-ae1a-b4d573122453"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
@@ -170,8 +170,8 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""1a0c3e3f-aab7-4d58-b730-500da129a1db"",
-                    ""path"": ""<Mouse>/delta/right"",
+                    ""id"": ""5e6ff9c0-3798-4c40-8d68-76ee33ae94f5"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
