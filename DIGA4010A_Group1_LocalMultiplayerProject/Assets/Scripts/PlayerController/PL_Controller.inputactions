@@ -1,0 +1,139 @@
+{
+    "name": "PL_Controller",
+    "maps": [
+        {
+            "name": "PlayerController",
+            "id": "804b2aee-23ba-4872-bf50-d50a89750742",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "6dd86962-3e36-41ae-80b0-3efbaec41050",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3aafc17e-f6e9-477d-89ac-7fc3f840e687",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "05ef4475-60db-470a-89c8-ad0d243d9b6c",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Mouse",
+                    "id": "043956a8-4c56-48d9-b00f-f4c08277b92a",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "deb2faaa-e491-4b22-93ea-7415b92abdaf",
+                    "path": "<Mouse>/delta/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard+Mouse",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "93eeaa2c-0680-482f-a897-8281e2a04f86",
+                    "path": "<Mouse>/delta/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard+Mouse",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "80d1e414-468b-46f5-a1f2-7484eab89fd0",
+                    "path": "<Mouse>/delta/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard+Mouse",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "1a0c3e3f-aab7-4d58-b730-500da129a1db",
+                    "path": "<Mouse>/delta/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard+Mouse",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard+Mouse",
+            "bindingGroup": "Keyboard+Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Controller",
+            "bindingGroup": "Controller",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Joystick",
+            "bindingGroup": "Joystick",
+            "devices": [
+                {
+                    "devicePath": "<Joystick>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
