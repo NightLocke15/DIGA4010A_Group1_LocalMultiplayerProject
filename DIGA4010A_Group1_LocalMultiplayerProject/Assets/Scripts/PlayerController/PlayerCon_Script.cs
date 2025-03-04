@@ -11,30 +11,31 @@ public class PlayerCon_Script : MonoBehaviour
 
    [SerializeField] private Transform playerBody;
    private Vector2 direction;
+   private Vector2 boostDirection;
    private Vector2 finalDirection;
 
    [SerializeField] private Rigidbody2D hammerHeadRb;
    [SerializeField] private Rigidbody2D hammerEndRb;
-   [SerializeField] private float moveSpeed = 5f;
+   [SerializeField] private float moveSpeedx, defaultx, moveSpeedy, defaulty, speedAdjuster;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         //Moves the hammer head between two the two radius 
-        Vector2 Movement = direction * moveSpeed * Time.deltaTime; //This is the direction in which we want to go
+        Vector2 Movement = new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy) * Time.deltaTime; //This is the direction in which we want to go
         Vector2 initialPos = new Vector2(hammerHeadRb.transform.localPosition.x, hammerHeadRb.transform.localPosition.y); //This is where we are
         Vector2 allowedPos = Movement + initialPos; //We put our direction and where we are together to get the target position of where we want to move to
         
-        allowedPos = Vector2.MoveTowards(hammerHeadRb.transform.localPosition, allowedPos, moveSpeed * Time.deltaTime); // This moves the target position to the correct spot
+        allowedPos = Vector2.MoveTowards(hammerHeadRb.transform.localPosition, allowedPos, moveSpeedx * moveSpeedy * Time.deltaTime); // This moves the target position to the correct spot
         hammerHeadRb.transform.localPosition = allowedPos.normalized * Mathf.Clamp(allowedPos.magnitude, innerRadius, outerRadius);//Now we move the hammer head after we have clamped the lenght of the target postion between the two radius.
 
-        Vector2 InverseMovement = new Vector2(Movement.x*-1f, Movement.y*-1f);
-        hammerEndRb.transform.Translate(InverseMovement);
+        // Vector2 InverseMovement = new Vector2(Movement.x*-1f, Movement.y*-1f);
+        // hammerEndRb.transform.Translate(InverseMovement);
     }
 
   
@@ -48,7 +49,7 @@ public class PlayerCon_Script : MonoBehaviour
 
     public void WaarIsJy(InputAction.CallbackContext context)
     {
-        Debug.Log("WaarIsJy");
+       
         if (context.performed)
         {
             Vector2 PlayerInput = context.ReadValue<Vector2>();
@@ -58,6 +59,40 @@ public class PlayerCon_Script : MonoBehaviour
         else
         {
             direction = Vector2.zero;
+        }
+    }
+
+    public void Boosting(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+           
+            Vector2 PlayerInput = context.ReadValue<Vector2>();
+            if (PlayerInput.x < 0)
+            {
+                moveSpeedx = -defaultx * (PlayerInput.x-speedAdjuster);
+            }
+            else
+            {
+                moveSpeedx = defaultx * (PlayerInput.x + speedAdjuster);
+            }
+            
+            if (PlayerInput.y < 0)
+            {
+                moveSpeedy = -defaulty * (PlayerInput.y-speedAdjuster);
+            }
+            else
+            {
+                moveSpeedy = defaulty * (PlayerInput.y+speedAdjuster);
+            }
+            // Debug.Log(PlayerInput.x + PlayerInput.y);
+            // moveSpeedx = moveSpeedx * (PlayerInput.x+1);
+            // moveSpeedy = moveSpeedy * (PlayerInput.y+1);
+        }
+        else
+        {
+           moveSpeedx = defaultx;
+           moveSpeedy = defaulty;
         }
     }
 }
