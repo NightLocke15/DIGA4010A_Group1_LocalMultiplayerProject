@@ -1,11 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
     private GameObject menuPanel;
     private GameObject howToPlayPanel;
     private GameObject creditsPanel;
+
+    //https://www.youtube.com/watch?v=Hn804Wgr3KE <-- reference for button select stuff
+
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button backCButton;
+    [SerializeField] private Button backHButton;
 
     private void Start()
     {
@@ -30,6 +37,8 @@ public class UIHandler : MonoBehaviour
         //activating the How to play screen
         menuPanel.SetActive(false);
         howToPlayPanel.SetActive(true);
+
+        backHButton.Select();
     }
 
     public void Credits() //Goes to page that showcases any important references for the game eg: Inspirations
@@ -37,6 +46,8 @@ public class UIHandler : MonoBehaviour
         //Activating the credits screen
         menuPanel.SetActive(false);
         creditsPanel.SetActive(true);
+
+        backCButton.Select();
     }
 
     public void Back()
@@ -45,6 +56,8 @@ public class UIHandler : MonoBehaviour
         howToPlayPanel.SetActive(false);
         creditsPanel.SetActive(false);
         menuPanel.SetActive(true);
+
+        playButton.Select();
     }
 
     /*public void Stages() //The players can choose game mode they would like to play on this game.
