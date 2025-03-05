@@ -28,8 +28,8 @@ public class HammerBehaviour : MonoBehaviour
         hammerHeadRb.rotation = angle;
         
         //Rotates the hammer end
-        Vector2 LookdirEnd = BodyCentre.position - hammerEndRb.transform.position;
-        float angleEnd = Mathf.Atan2(LookdirEnd.y, LookdirEnd.x) * Mathf.Rad2Deg-adjustEnd;
-        hammerEndRb.rotation = angleEnd;
+        // Vector2 LookdirEnd = BodyCentre.position - hammerEndRb.transform.position;
+        // float angleEnd = Mathf.Atan2(LookdirEnd.y, LookdirEnd.x) * Mathf.Rad2Deg-adjustEnd;
+        // hammerEndRb.rotation = angleEnd;
     }
 }

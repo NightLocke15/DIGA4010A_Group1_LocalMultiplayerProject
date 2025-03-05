@@ -14,9 +14,14 @@ public class PlayerCon_Script : MonoBehaviour
    private Vector2 boostDirection;
    private Vector2 finalDirection;
 
-   [SerializeField] private Rigidbody2D hammerHeadRb;
+   public Rigidbody2D hammerHeadRb;
    [SerializeField] private Rigidbody2D hammerEndRb;
+   public Rigidbody2D playerBodyRb;
    [SerializeField] private float moveSpeedx, defaultx, moveSpeedy, defaulty, speedAdjuster;
+   
+   [SerializeField] private HammerCollider hammerColScript;
+
+   [SerializeField] private float gravity = 9.81f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,19 +31,36 @@ public class PlayerCon_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Moves the hammer head between two the two radius 
-        Vector2 Movement = new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy) * Time.deltaTime; //This is the direction in which we want to go
-        Vector2 initialPos = new Vector2(hammerHeadRb.transform.localPosition.x, hammerHeadRb.transform.localPosition.y); //This is where we are
-        Vector2 allowedPos = Movement + initialPos; //We put our direction and where we are together to get the target position of where we want to move to
-        
-        allowedPos = Vector2.MoveTowards(hammerHeadRb.transform.localPosition, allowedPos, moveSpeedx * moveSpeedy * Time.deltaTime); // This moves the target position to the correct spot
-        hammerHeadRb.transform.localPosition = allowedPos.normalized * Mathf.Clamp(allowedPos.magnitude, innerRadius, outerRadius);//Now we move the hammer head after we have clamped the lenght of the target postion between the two radius.
-
-        // Vector2 InverseMovement = new Vector2(Movement.x*-1f, Movement.y*-1f);
-        // hammerEndRb.transform.Translate(InverseMovement);
+        if (!hammerColScript.IsTouchingEnviroment)
+        {
+          //  hammerHeadRb.transform.parent = playerBody;
+            ApplyMovement(hammerHeadRb.transform, 1f);
+        }
+        else
+        {
+          // playerBody.transform.parent = hammerHeadRb.transform;
+            ApplyMovement(playerBody.transform, -1f);
+        }
     }
 
-  
+    private void ApplyMovement(Transform moveThis, float inverseDirection)
+    {
+        //Moves the hammer head between two the two radius 
+        Vector2 Movement = (new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy) * Time.deltaTime) * inverseDirection; //This is the direction in which we want to go
+        Vector2 initialPos = new Vector2(moveThis.localPosition.x, moveThis.localPosition.y); //This is where we are
+        Vector2 allowedPos = (Movement) + initialPos; //We put our direction and where we are together to get the target position of where we want to move to
+       
+        allowedPos = Vector2.MoveTowards(moveThis.localPosition, allowedPos, moveSpeedx * moveSpeedy * Time.deltaTime); // This moves the target position to the correct spot
+        moveThis.localPosition = allowedPos.normalized * Mathf.Clamp(allowedPos.magnitude, innerRadius, outerRadius);//Now we move the hammer head after we have clamped the lenght of the target postion between the two radius.
+
+    }
+
+    public void ManageGravityScale(Rigidbody2D AddGravityScale, Rigidbody2D RemoveGravityScale)
+    {
+        AddGravityScale.linearVelocity = Vector2.zero;
+    }
+
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -47,7 +69,7 @@ public class PlayerCon_Script : MonoBehaviour
         Gizmos.DrawWireSphere(playerBody.position, innerRadius);
     }
 
-    public void WaarIsJy(InputAction.CallbackContext context)
+    public void InputMovement(InputAction.CallbackContext context)
     {
        
         if (context.performed)
