@@ -3,6 +3,22 @@ using UnityEngine.UI;
 
 public class PlayerTwoHolder : MonoBehaviour
 {
+    public bool p2lost = false;
+
+    #region Upgrades
+    //Passive
+    public bool freezeOnCrit;
+    public bool higherKnockback;
+    public bool higherHealth;
+    public bool fasterMovingWeapon;
+
+    //Active
+    public bool boosterRocket;
+    public bool dash;
+    public bool shield;
+    public bool chuckBomb;
+    #endregion
+
     //https://www.youtube.com/watch?v=YJW3TLmckqk for how to add health bar to players
 
     [SerializeField] private Slider playerHealth;
