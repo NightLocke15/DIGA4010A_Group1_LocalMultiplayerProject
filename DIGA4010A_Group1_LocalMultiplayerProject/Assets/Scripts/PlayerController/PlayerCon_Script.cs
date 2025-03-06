@@ -1,7 +1,9 @@
+using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using Vector2 = UnityEngine.Vector2;
 
 public class PlayerCon_Script : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class PlayerCon_Script : MonoBehaviour
    [SerializeField] private HammerCollider hammerColScript;
 
    [SerializeField] private float gravity = 9.81f;
+   [SerializeField] private bool HasInput = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,27 +34,50 @@ public class PlayerCon_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!hammerColScript.IsTouchingEnviroment)
+        // ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
+        if (HasInput)
         {
-          //  hammerHeadRb.transform.parent = playerBody;
-            ApplyMovement(hammerHeadRb.transform, 1f);
+         
+            if (!hammerColScript.IsTouchingEnviroment)
+            {
+                //  hammerHeadRb.transform.parent = playerBody;
+                ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
+            }
+            else
+            {
+                // playerBody.transform.parent = hammerHeadRb.transform;
+                //ApplyMovement(playerBody.transform, hammerHeadRb.transform,-1f);
+            }
         }
-        else
-        {
-          // playerBody.transform.parent = hammerHeadRb.transform;
-            ApplyMovement(playerBody.transform, -1f);
-        }
+        
     }
 
-    private void ApplyMovement(Transform moveThis, float inverseDirection)
+    private void ApplyMovement(Transform moveThis,Transform AnchorPoint, float inverseDirection)
     {
+        Vector2 anchorPos = Vector2.zero;
+        Vector2 AdjustIP = new Vector2(moveThis.position.x- AnchorPoint.position.x, moveThis.position.y- AnchorPoint.position.y);
+        Vector2 initialPos = new Vector2(anchorPos.x+ AdjustIP.x, anchorPos.y + AdjustIP.y);
+        Vector2 Movement = (new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy)*Time.fixedDeltaTime) * inverseDirection; 
+        
+        Vector2 allowedPos = new Vector2(initialPos.x + Movement.x, initialPos.y + Movement.y);
+        //float mag = Vector2.Distance(allowedPos, anchorPos);
+        Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
+        Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
+        Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.position.x, restrictPos.y+ AnchorPoint.position.y);
+        
+        moveThis.position = Vector2.MoveTowards(moveThis.position, finalPos, 1);
+        
         //Moves the hammer head between two the two radius 
-        Vector2 Movement = (new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy) * Time.deltaTime) * inverseDirection; //This is the direction in which we want to go
-        Vector2 initialPos = new Vector2(moveThis.localPosition.x, moveThis.localPosition.y); //This is where we are
-        Vector2 allowedPos = (Movement) + initialPos; //We put our direction and where we are together to get the target position of where we want to move to
-       
-        allowedPos = Vector2.MoveTowards(moveThis.localPosition, allowedPos, moveSpeedx * moveSpeedy * Time.deltaTime); // This moves the target position to the correct spot
-        moveThis.localPosition = allowedPos.normalized * Mathf.Clamp(allowedPos.magnitude, innerRadius, outerRadius);//Now we move the hammer head after we have clamped the lenght of the target postion between the two radius.
+        // Vector2 AnchorPos = new Vector2(AnchorPoint.position.x, AnchorPoint.position.y); // This is the postition the player can move around. Either the player-body or the hammer head
+        // Vector2 Movement = (new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy)*Time.fixedDeltaTime) * inverseDirection; //This is the direction in which we want to go
+        // Vector2 initialPos = new Vector2(moveThis.position.x, moveThis.position.y); //This is the current position of the gameobject we want to move
+        // Vector2 allowedPos = new Vector2(initialPos.x + Movement.x, initialPos.y + Movement.y); //We add the direction to the space we currently are 
+        // float offset = Vector2.Distance(AnchorPos, allowedPos); //Get the distance between the anchor point and the allowedPos
+        // Vector2 requiredDirection = new Vector2(allowedPos.x - AnchorPos.x, allowedPos.y - AnchorPos.y); //Get the direction to the new allowedPos
+        // Vector2 test =  (requiredDirection.normalized) * Mathf.Clamp(offset, innerRadius, outerRadius);//Now we move the hammer head after we have clamped the lenght of the target postion between the two radius.
+        // moveThis.position = test;
+        // Debug.Log(offset+ ":Offset");
+        // Debug.Log(requiredDirection.magnitude + ":Magnitude");
 
     }
 
@@ -77,9 +103,11 @@ public class PlayerCon_Script : MonoBehaviour
             Vector2 PlayerInput = context.ReadValue<Vector2>();
             direction.x = PlayerInput.x;
             direction.y = PlayerInput.y;
+            HasInput = true;
         }
         else
         {
+            HasInput = false;
             direction = Vector2.zero;
         }
     }

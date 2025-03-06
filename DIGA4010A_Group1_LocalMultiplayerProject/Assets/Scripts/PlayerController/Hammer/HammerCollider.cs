@@ -23,7 +23,7 @@ public class HammerCollider : MonoBehaviour
         if (other.collider.tag == "Enviroment")
         {
             IsTouchingEnviroment = true;
-            playerScript.ManageGravityScale(playerScript.hammerHeadRb, playerScript.playerBodyRb);
+           // playerScript.ManageGravityScale(playerScript.hammerHeadRb, playerScript.playerBodyRb);
         }
     }
 
