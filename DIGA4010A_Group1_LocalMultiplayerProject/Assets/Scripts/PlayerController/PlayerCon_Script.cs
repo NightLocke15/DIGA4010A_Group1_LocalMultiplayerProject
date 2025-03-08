@@ -12,32 +12,35 @@ public class PlayerCon_Script : MonoBehaviour
    [SerializeField] private float innerRadius; //the deadzone where the arms can't go at centre of body
 
    [SerializeField] private Transform playerBody;
-   private Vector2 direction;
+   private Vector2 directionLeft, directionRight;
    private Vector2 boostDirection;
    private Vector2 finalDirection;
 
-   public Rigidbody2D hammerHeadRb;
-   [SerializeField] private Rigidbody2D hammerEndRb;
-   public Rigidbody2D playerBodyRb;
-   [SerializeField] private float moveSpeedx, defaultx, moveSpeedy, defaulty, speedAdjuster;
-   
+   [SerializeField]
+   private Rigidbody2D hammerHeadRb;
+   [SerializeField] private Rigidbody2D playerBodyRb;
+   // [SerializeField] private float moveSpeedx, defaultx, moveSpeedy, defaulty, speedAdjuster;
+   [SerializeField] private float moveSpeed = 5f;
    [SerializeField] private HammerCollider hammerColScript;
 
    [SerializeField] private float gravity = 9.81f;
-   [SerializeField] private bool HasInput = false;
+   [FormerlySerializedAs("HasInput")] [SerializeField] private bool HasLeftInput = false, HasRightInput = false;
+
+   [SerializeField] private float speedBarrier, currentSpeed, force;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+       playerBodyRb.gravityScale = gravity;
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+        
         // ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
-        if (HasInput)
+        if (HasLeftInput || HasRightInput)
         {
-         
             if (!hammerColScript.IsTouchingEnviroment)
             {
                 //  hammerHeadRb.transform.parent = playerBody;
@@ -46,27 +49,37 @@ public class PlayerCon_Script : MonoBehaviour
             else
             {
                 // playerBody.transform.parent = hammerHeadRb.transform;
-                //ApplyMovement(playerBody.transform, hammerHeadRb.transform,-1f);
+                ApplyMovement(playerBody.transform, hammerHeadRb.transform,-1f);
             }
         }
+
+        else
+        {
+            hammerHeadRb.linearVelocity = Vector2.zero;
+        }
+        
+       
+       
         
     }
 
     private void ApplyMovement(Transform moveThis,Transform AnchorPoint, float inverseDirection)
     {
         Vector2 anchorPos = Vector2.zero;
-        Vector2 AdjustIP = new Vector2(moveThis.position.x- AnchorPoint.position.x, moveThis.position.y- AnchorPoint.position.y);
+        Vector2 AdjustIP = new Vector2(moveThis.localPosition.x- AnchorPoint.localPosition.x, moveThis.localPosition.y- AnchorPoint.localPosition.y);
         Vector2 initialPos = new Vector2(anchorPos.x+ AdjustIP.x, anchorPos.y + AdjustIP.y);
-        Vector2 Movement = (new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy)*Time.fixedDeltaTime) * inverseDirection; 
+        Vector2 direction = new Vector2(directionLeft.x + directionRight.x, directionLeft.y + directionRight.y); 
+        Vector2 Movement = (new Vector2(direction.x * moveSpeed, direction.y * moveSpeed)*Time.fixedDeltaTime) * inverseDirection; 
         
         Vector2 allowedPos = new Vector2(initialPos.x + Movement.x, initialPos.y + Movement.y);
         //float mag = Vector2.Distance(allowedPos, anchorPos);
         Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
         Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
-        Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.position.x, restrictPos.y+ AnchorPoint.position.y);
+        Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
         
-        moveThis.position = Vector2.MoveTowards(moveThis.position, finalPos, 1);
+        moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
         
+       
         //Moves the hammer head between two the two radius 
         // Vector2 AnchorPos = new Vector2(AnchorPoint.position.x, AnchorPoint.position.y); // This is the postition the player can move around. Either the player-body or the hammer head
         // Vector2 Movement = (new Vector2(direction.x * moveSpeedx, direction.y * moveSpeedy)*Time.fixedDeltaTime) * inverseDirection; //This is the direction in which we want to go
@@ -81,9 +94,16 @@ public class PlayerCon_Script : MonoBehaviour
 
     }
 
-    public void ManageGravityScale(Rigidbody2D AddGravityScale, Rigidbody2D RemoveGravityScale)
+    public void ManageGravityScale(Rigidbody2D ControlGravity)
     {
-        AddGravityScale.linearVelocity = Vector2.zero;
+        if (ControlGravity.gravityScale == 0)
+        {
+            ControlGravity.gravityScale = gravity;
+        }
+        else
+        {
+            ControlGravity.gravityScale = 0;
+        }
     }
 
 
@@ -95,54 +115,62 @@ public class PlayerCon_Script : MonoBehaviour
         Gizmos.DrawWireSphere(playerBody.position, innerRadius);
     }
 
-    public void InputMovement(InputAction.CallbackContext context)
+    public void LeftInputMovement(InputAction.CallbackContext context)
     {
-       
         if (context.performed)
         {
             Vector2 PlayerInput = context.ReadValue<Vector2>();
-            direction.x = PlayerInput.x;
-            direction.y = PlayerInput.y;
-            HasInput = true;
+            directionLeft.x = PlayerInput.x;
+            directionLeft.y = PlayerInput.y;
+            HasLeftInput = true;
         }
         else
         {
-            HasInput = false;
-            direction = Vector2.zero;
+            HasLeftInput = false;
+            directionLeft = Vector2.zero;
         }
     }
 
-    public void Boosting(InputAction.CallbackContext context)
+    public void RightInputMovement(InputAction.CallbackContext context)
     {
-        if (context.performed)
-        {
-           
-            Vector2 PlayerInput = context.ReadValue<Vector2>();
-            if (PlayerInput.x < 0)
+            if (context.performed)
             {
-                moveSpeedx = -defaultx * (PlayerInput.x-speedAdjuster);
+                Vector2 PlayerInput = context.ReadValue<Vector2>();
+                directionRight.x = PlayerInput.x;
+                directionRight.y = PlayerInput.y;
+                HasRightInput = true;
             }
             else
             {
-                moveSpeedx = defaultx * (PlayerInput.x + speedAdjuster);
+                HasRightInput = false;
+                directionRight = Vector2.zero;
             }
-            
-            if (PlayerInput.y < 0)
-            {
-                moveSpeedy = -defaulty * (PlayerInput.y-speedAdjuster);
-            }
-            else
-            {
-                moveSpeedy = defaulty * (PlayerInput.y+speedAdjuster);
-            }
-            // Debug.Log(PlayerInput.x + PlayerInput.y);
-            // moveSpeedx = moveSpeedx * (PlayerInput.x+1);
-            // moveSpeedy = moveSpeedy * (PlayerInput.y+1);
-        }
-        else
-        {
-           moveSpeedx = defaultx;
-           moveSpeedy = defaulty;
-        }
+         //   Vector2 PlayerInput = context.ReadValue<Vector2>();
+        //     if (PlayerInput.x < 0)
+        //     {
+        //         moveSpeedx = -defaultx * (PlayerInput.x-speedAdjuster);
+        //     }
+        //     else
+        //     {
+        //         moveSpeedx = defaultx * (PlayerInput.x + speedAdjuster);
+        //     }
+        //     
+        //     if (PlayerInput.y < 0)
+        //     {
+        //         moveSpeedy = -defaulty * (PlayerInput.y-speedAdjuster);
+        //     }
+        //     else
+        //     {
+        //         moveSpeedy = defaulty * (PlayerInput.y+speedAdjuster);
+        //     }
+        //     // Debug.Log(PlayerInput.x + PlayerInput.y);
+        //     // moveSpeedx = moveSpeedx * (PlayerInput.x+1);
+        //     // moveSpeedy = moveSpeedy * (PlayerInput.y+1);
+        // }
+        // else
+        // {
+        //    moveSpeedx = defaultx;
+        //    moveSpeedy = defaulty;
+        // }
     }
 }

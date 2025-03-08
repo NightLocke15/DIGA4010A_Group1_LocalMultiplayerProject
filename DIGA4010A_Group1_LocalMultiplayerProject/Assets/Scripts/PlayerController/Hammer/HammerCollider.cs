@@ -5,7 +5,7 @@ public class HammerCollider : MonoBehaviour
 {
     public bool IsTouchingEnviroment = false;
     [SerializeField] private PlayerCon_Script playerScript;
-    
+    [SerializeField] private Rigidbody2D hammerRb, playerRB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +23,7 @@ public class HammerCollider : MonoBehaviour
         if (other.collider.tag == "Enviroment")
         {
             IsTouchingEnviroment = true;
+            playerScript.ManageGravityScale(playerRB);
            // playerScript.ManageGravityScale(playerScript.hammerHeadRb, playerScript.playerBodyRb);
         }
     }
@@ -37,6 +38,7 @@ public class HammerCollider : MonoBehaviour
         if (other.collider.tag == "Enviroment")
         {
             IsTouchingEnviroment = false;
+            playerScript.ManageGravityScale(playerRB);
         }
     }
 }
