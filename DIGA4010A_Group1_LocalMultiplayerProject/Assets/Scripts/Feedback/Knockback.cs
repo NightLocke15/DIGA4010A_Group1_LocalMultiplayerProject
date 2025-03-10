@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class Knockback : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject otherPlayer;
+    private Vector2 force = new Vector2(1, 0);
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (this.gameObject.transform.parent.name == "PlayerObjectOne")
+        {
+            otherPlayer = GameObject.Find("PlayerObjectTwo");
+            if (collision.collider.name == "PlayerObjectOne")
+            {
+
+            }
+            else if (collision.collider.name == "PlayerObjectTwo")
+            {
+                otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(transform.forward * 5, ForceMode2D.Impulse);
+            }
+            
+        }
+        else
+        {
+            otherPlayer = GameObject.Find("PlayerObjectOne");
+        }
         
     }
 }
