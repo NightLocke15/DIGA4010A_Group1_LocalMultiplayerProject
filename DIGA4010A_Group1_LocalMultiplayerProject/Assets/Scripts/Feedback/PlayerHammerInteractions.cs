@@ -3,15 +3,16 @@ using UnityEngine.UI;
 
 public class PlayerHammerInteractions : MonoBehaviour
 {
-    [SerializeField] private Slider otherPlayerHealth;
-    [SerializeField] private SpriteRenderer otherPlayerObjectBounds;
-    [SerializeField] private SpriteRenderer thisHammerObjectBounds;
-
-    private void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-
-        thisHammerObjectBounds = this.gameObject.GetComponent<SpriteRenderer>();
-        Debug.Log(thisHammerObjectBounds.bounds.extents);
+        if (collision.collider.tag == "Player")
+        {
+            if (collision.collider.transform.parent.name != this.gameObject.transform.parent.name)
+            {
+                collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;
+                Debug.Log("Hit ENemy");
+            }
+            else { }
+        }        
     }
 }

@@ -15,11 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/UIAndUpgrades.unity
     guid: ecb6c6de2d1e9ac4587166164d7d901c
   - enabled: 1
-    path: Assets/Scenes/GameStageTest.unity
+    path: Assets/Scenes/WaitingRoom.unity
     guid: fc36614720873c74495900a0436a7591
   - enabled: 1
-    path: Assets/Scenes/Scenetest.unity
-    guid: 59286e04aad1ea0458750c065407efb0
+    path: Assets/Scenes/StageZero.unity
+    guid: 6369bf680513c874fa9b3c3c5a13104f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -22,11 +22,13 @@ public class PlayerInformationHandler : MonoBehaviour
     //https://www.youtube.com/watch?v=YJW3TLmckqk for how to add health bar to players
     //https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5 change name in code
 
-    [SerializeField] private Slider playerHealth;
+    public Slider playerHealth;
     [SerializeField] private GameObject otherPlayer;
     private float frozenTime;
     [SerializeField] private bool frozenTimeBool;
     public bool startGame;
+
+    public bool playerLost = false;
 
     private void Awake()
     {
@@ -45,11 +47,19 @@ public class PlayerInformationHandler : MonoBehaviour
             this.gameObject.name = "PlayerObjectTwo";
             this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
         }
-        //playerHealth.value = 100;
+
+        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>();
+        playerHealth.value = 100;
     }
 
     private void Update()
     {
+        if (playerHealth.value <= 0)
+        {
+            playerLost = true;
+            playerHealth.value += 1;
+        }
+
         //FreezeEffect();
     }
 
