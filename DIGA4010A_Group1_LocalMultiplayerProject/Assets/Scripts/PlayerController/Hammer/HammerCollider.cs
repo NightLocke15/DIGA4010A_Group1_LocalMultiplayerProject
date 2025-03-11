@@ -1,9 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class HammerCollider : MonoBehaviour
 {
-    public bool IsTouchingEnviroment = false;
+    [FormerlySerializedAs("IsTouchingEnviroment")] public bool IsTouchingEnviromentHammer = false;
     [SerializeField] private PlayerCon_Script playerScript;
     [SerializeField] private Rigidbody2D hammerRb, playerRB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,9 +23,8 @@ public class HammerCollider : MonoBehaviour
     {
         if (other.collider.tag == "Enviroment")
         {
-            IsTouchingEnviroment = true;
-            playerScript.ManageGravityScale(playerRB);
-           // playerScript.ManageGravityScale(playerScript.hammerHeadRb, playerScript.playerBodyRb);
+            IsTouchingEnviromentHammer = true;
+            playerScript.SwitchgravityOff();
         }
     }
 
@@ -37,8 +37,8 @@ public class HammerCollider : MonoBehaviour
     {
         if (other.collider.tag == "Enviroment")
         {
-            IsTouchingEnviroment = false;
-            playerScript.ManageGravityScale(playerRB);
+            IsTouchingEnviromentHammer = false;
+            playerScript.SwitchgravityOn();
         }
     }
 }
