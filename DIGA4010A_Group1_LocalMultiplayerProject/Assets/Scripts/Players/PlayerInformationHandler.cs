@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerInformationHandler : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class PlayerInformationHandler : MonoBehaviour
 
     public bool playerLost = false;
 
+    private RoundsUI roundsUIScript;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -57,6 +60,23 @@ public class PlayerInformationHandler : MonoBehaviour
         if (playerHealth.value <= 0)
         {
             playerLost = true;
+            if (this.gameObject.name == "PlayerObjectOne")
+            {
+                roundsUIScript = GameObject.Find("Rounds Won").GetComponent<RoundsUI>();
+                roundsUIScript.playerTwoScore = true;
+                //this.gameObject.transform.GetChild(0).position = new Vector3(-6, 3);
+                //otherPlayer = GameObject.Find("PlayerObjectTwo");
+                //otherPlayer.transform.GetChild(0).position = new Vector3(6, 3);
+            }
+            else if (this.gameObject.name == "PlayerObjectTwo")
+            {
+                roundsUIScript = GameObject.Find("Rounds Won").GetComponent<RoundsUI>();
+                roundsUIScript.playerOneScore = true;
+                //this.gameObject.transform.GetChild(0).position = new Vector3(6, 3);
+                //otherPlayer = GameObject.Find("PlayerObjectOne");
+                //otherPlayer.transform.GetChild(0).position = new Vector3(-6, 3);
+            }
+
             playerHealth.value += 1;
         }
 

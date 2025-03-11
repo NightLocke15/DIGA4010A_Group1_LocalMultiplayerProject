@@ -1,18 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHammerInteractions : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Player")
+        if(SceneManager.GetActiveScene().name == "StageZero")
         {
-            if (collision.collider.transform.parent.name != this.gameObject.transform.parent.name)
+            if (collision.collider.tag == "Player")
             {
-                collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;
-                Debug.Log("Hit ENemy");
+                if (collision.collider.transform.parent.name != this.gameObject.transform.parent.name)
+                {
+                    collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;
+                    Debug.Log("Hit ENemy");
+                }
+                else { }
             }
-            else { }
-        }        
+        }
+               
     }
 }

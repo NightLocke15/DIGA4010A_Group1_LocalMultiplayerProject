@@ -344,14 +344,16 @@ MonoBehaviour:
   playerBody: {fileID: 3438122892021310251}
   hammerHeadRb: {fileID: 4870372215241388669}
   playerBodyRb: {fileID: 8852404898414201316}
-  moveSpeed: 2.5
+  moveSpeed: 25
   hammerColScript: {fileID: 7810691098896959232}
   gravity: 3
   HasLeftInput: 0
   HasRightInput: 0
-  speedBarrier: 1
+  speedBarrier: 20
   currentSpeed: 0
-  force: 10
+  force: 0.5
+  prevPos: {x: 0, y: 0}
+  currentPos: {x: 0, y: 0}
 --- !u!114 &8761512175131678725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +427,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a20aa9f1-0353-46b8-b7bb-d65f26fc2e15
     m_ActionName: 'PlayerController/StartGame[/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5bd01151-d02e-4378-aee8-47c2fb9acd72
+    m_ActionName: 'Menu/Navigation[/XInputControllerWindows/leftStick/up,/XInputControllerWindows1/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows1/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows1/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows1/leftStick/right]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a10ce4d7-5142-4906-a7a9-3e79562955fa
+    m_ActionName: 'Menu/Select[/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
@@ -515,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac06cf726e94d894bbcb871a0ff83d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsTouchingEnviroment: 0
+  IsTouchingEnviromentPlayer: 0
   playerScript: {fileID: 5716477992334461125}
   hammerRb: {fileID: 4870372215241388669}
   playerRB: {fileID: 8852404898414201316}
@@ -768,7 +778,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8689826349362954367}
-  - component: {fileID: 6008459063548745133}
   - component: {fileID: 6124401001734458924}
   m_Layer: 0
   m_Name: PlayerObject
@@ -794,33 +803,6 @@ Transform:
   - {fileID: 3932774617738653457}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &6008459063548745133
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4222146023813045611}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &6124401001734458924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,6 +827,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 0}
   frozenTimeBool: 0
   startGame: 0
+  playerLost: 0
 --- !u!1 &5508106052317784508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,7 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093fecd58237a4545863ad346d267f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsTouchingEnviroment: 0
+  IsTouchingEnviromentHammer: 0
   playerScript: {fileID: 5716477992334461125}
   hammerRb: {fileID: 4870372215241388669}
   playerRB: {fileID: 8852404898414201316}
@@ -1168,6 +1151,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0b7690f684c614a8702e019da782ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherPlayerHealth: {fileID: 0}
-  otherPlayerObjectBounds: {fileID: 0}
-  thisHammerObjectBounds: {fileID: 0}

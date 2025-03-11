@@ -30,27 +30,6 @@ public class PlayerUpgrades : MonoBehaviour
 
     private void Update()
     {
-        //if (playerOne.GetComponent<PlayerInformationHandler>().playerLost == true)
-        //{
-        //    playerOneUpgradePanel.SetActive(true);
-        //    playerOneUpgradePanel.transform.GetChild(0).GetComponent<Button>().Select();
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = false;
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = false;
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().DeactivateInput();
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "Menu";
-        //    playerOne.GetComponent<PlayerInformationHandler>().playerLost = false;
-        //}
-        //else if (playerTwo.GetComponent<PlayerInformationHandler>().playerLost == true)
-        //{
-        //    playerTwoUpgradePanel.SetActive(true);
-        //    playerTwoUpgradePanel.transform.GetChild(0).GetComponent<Button>().Select();
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = false;
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = false;
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerInput>().DeactivateInput();
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "Menu";
-        //    playerTwo.GetComponent<PlayerInformationHandler>().playerLost = false;
-        //}
-
         if (playerOne.GetComponent<PlayerInformationHandler>().playerLost == true)
         {
             playerOneUpgradePanel.SetActive(true);
@@ -81,35 +60,35 @@ public class PlayerUpgrades : MonoBehaviour
         }
     }
 
-    private void UpgradeTest()
+    public void UpgradeTest()
     {
-        //if (playerOneUpgradePanel.activeSelf == true)
-        //{
-        //    Debug.Log("Upgrade Chosen");
-        //    playerOne.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
-        //    playerOne.transform.position = new Vector3(-6, 3);
-        //    playerTwo.transform.position = new Vector3(6, 3);
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().ActivateInput();
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "PlayerController";
-        //    playerOneUpgradePanel.SetActive(false);
+        if (playerOneUpgradePanel.activeSelf == true)
+        {
+            Debug.Log("Upgrade Chosen");
+            playerOne.transform.GetChild(0).position = new Vector3(-6, 3);
+            playerTwo.transform.GetChild(0).position = new Vector3(6, 3);
+            playerOne.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
+            playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;           
+            playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
+            playerTwo.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
+            playerOne.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "PlayerController";
+            playerOneUpgradePanel.SetActive(false);
+          
             
-            
-        //}
-        //else if (playerTwoUpgradePanel.activeSelf == true)
-        //{
-        //    Debug.Log("Upgrade Chosen");
-        //    playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
-        //    playerOne.transform.position = new Vector3(-6, 3);
-        //    playerTwo.transform.position = new Vector3(6, 3);
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
-        //    playerOne.transform.GetChild(0).GetComponent<PlayerInput>().ActivateInput();
-        //    playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "PlayerController";
-        //    playerTwoUpgradePanel.SetActive(false);
+        }
+        else if (playerTwoUpgradePanel.activeSelf == true)
+        {
+            Debug.Log("Upgrade Chosen");
+            playerOne.transform.GetChild(0).position = new Vector3(-6, 3);
+            playerTwo.transform.GetChild(0).position = new Vector3(6, 3);
+            playerOne.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
+            playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
+            playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
+            playerTwo.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
+            playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "PlayerController";
+            playerTwoUpgradePanel.SetActive(false);
             
            
-        //}
+        }
     }
 }

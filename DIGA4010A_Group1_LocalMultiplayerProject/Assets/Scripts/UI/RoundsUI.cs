@@ -6,15 +6,34 @@ public class RoundsUI : MonoBehaviour
 {
     public List<Toggle> rounds = new List<Toggle>();
 
+    public int playerOneWins;
+    public int playerTwoWins;
+
+    [SerializeField] private GameObject playerOne;
+    [SerializeField] private GameObject playerTwo;
+
+    public bool playerOneScore;
+    public bool playerTwoScore;
+
+    private void Start()
+    {
+        playerOne = GameObject.Find("PlayerObjectOne");
+        playerTwo = GameObject.Find("PlayerObjectTwo");
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (playerOneScore == true)
         {
-            RoundWon(new Color32(9, 253, 0, 255));
-        }
-        else if (Input.GetKeyDown(KeyCode.P))
-        {
+            playerOneWins += 1;
             RoundWon(new Color32(253, 0, 62, 255));
+            playerOneScore = false;
+        }
+        else if (playerTwoScore == true)
+        {
+            playerTwoWins += 1;
+            RoundWon(new Color32(9, 253, 0, 255));
+            playerTwoScore = false;
         }
     }
 
