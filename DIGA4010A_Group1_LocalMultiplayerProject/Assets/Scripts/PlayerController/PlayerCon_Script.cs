@@ -27,58 +27,121 @@ public class PlayerCon_Script : MonoBehaviour
    [FormerlySerializedAs("HasInput")] [SerializeField] private bool HasLeftInput = false, HasRightInput = false;
 
    [SerializeField] private float speedBarrier, currentSpeed, force;
+   
+   [SerializeField]
+   private Vector2 prevPos, currentPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        playerBodyRb.gravityScale = gravity;
+       prevPos = playerBody.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
        
+        // if (!hammerColScript.IsTouchingEnviromentHammer)
+        // {
+        //     //  hammerHeadRb.transform.parent = playerBody;
+        //     ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
+        // }
+        // else
+        // {
+        //     // playerBody.transform.parent = hammerHeadRb.transform;
+        //     ApplyMovement(playerBody.transform, hammerHeadRb.transform,-1f);
+        // }
         
-        // ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
-        if (HasLeftInput || HasRightInput)
-        {
-            if (!hammerColScript.IsTouchingEnviroment)
-            {
-                //  hammerHeadRb.transform.parent = playerBody;
-                ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
-            }
-            else
-            {
-                // playerBody.transform.parent = hammerHeadRb.transform;
-                ApplyMovement(playerBody.transform, hammerHeadRb.transform,-1f);
-            }
-        }
-
-        else
-        {
-            hammerHeadRb.linearVelocity = Vector2.zero;
-        }
-        
+        // if (HasLeftInput || HasRightInput)
+        // {
+        //     if (!hammerColScript.IsTouchingEnviromentHammer)
+        //     {
+        //         //  hammerHeadRb.transform.parent = playerBody;
+        //         ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
+        //     }
+        //     else
+        //     {
+        //         // playerBody.transform.parent = hammerHeadRb.transform;
+        //         ApplyMovement(playerBody.transform, hammerHeadRb.transform,-1f);
+        //     }
+        // }
+        //
+        // else
+        // {
+        //     hammerHeadRb.linearVelocity = Vector2.zero;
+        // }
+        //
        
        
         
     }
 
+    private void FixedUpdate()
+    {
+        if (!hammerColScript.IsTouchingEnviromentHammer)
+        {
+            //  hammerHeadRb.transform.parent = playerBody;
+            ApplyMovement(hammerHeadRb.transform,playerBody, 1f);
+        }
+        else
+        {
+            // playerBody.transform.parent = hammerHeadRb.transform;
+            ApplyMovement(playerBody.transform, hammerHeadRb.transform,-1f);
+        }
+    }
+
     private void ApplyMovement(Transform moveThis,Transform AnchorPoint, float inverseDirection)
     {
+        currentPos = playerBody.localPosition;
         Vector2 anchorPos = Vector2.zero;
         Vector2 AdjustIP = new Vector2(moveThis.localPosition.x- AnchorPoint.localPosition.x, moveThis.localPosition.y- AnchorPoint.localPosition.y);
         Vector2 initialPos = new Vector2(anchorPos.x+ AdjustIP.x, anchorPos.y + AdjustIP.y);
         Vector2 direction = new Vector2(directionLeft.x + directionRight.x, directionLeft.y + directionRight.y); 
-        Vector2 Movement = (new Vector2(direction.x * moveSpeed, direction.y * moveSpeed)*Time.fixedDeltaTime) * inverseDirection; 
+        Vector2 Movement = (new Vector2(direction.x * moveSpeed, direction.y * moveSpeed)*Time.deltaTime) * inverseDirection;
+        float speed = 0;
+        speed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
+        float Result = 0;
+        Result = speed;
+        Debug.Log(Result);
         
-        Vector2 allowedPos = new Vector2(initialPos.x + Movement.x, initialPos.y + Movement.y);
-        //float mag = Vector2.Distance(allowedPos, anchorPos);
-        Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
-        Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
-        Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
+      //  Debug.Log(Xspeed + Yspeed);
         
-        moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
+       // Debug.Log(Yspeed);
+
+        if (moveThis == hammerHeadRb.transform)
+        {
+            Vector2 allowedPos = new Vector2(initialPos.x + Movement.x, initialPos.y + Movement.y);
+            //float mag = Vector2.Distance(allowedPos, anchorPos);
+            Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
+            Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
+            Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
         
+            moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
+        }
+        
+        else if (moveThis == playerBody)
+        {
+            if (Result <= speedBarrier)
+            {
+                Vector2 allowedPos = new Vector2(initialPos.x + Movement.x, initialPos.y + Movement.y);
+                //float mag = Vector2.Distance(allowedPos, anchorPos);
+                Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
+                Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
+                Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
+        
+                moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
+            }
+            
+            else
+            {
+               float Addforce = force * Result;
+               playerBodyRb.AddForce(Movement.normalized * Addforce, ForceMode2D.Impulse);
+               hammerColScript.IsTouchingEnviromentHammer = false;
+            }
+           
+        }
+        
+        prevPos = currentPos;
        
         //Moves the hammer head between two the two radius 
         // Vector2 AnchorPos = new Vector2(AnchorPoint.position.x, AnchorPoint.position.y); // This is the postition the player can move around. Either the player-body or the hammer head
@@ -94,16 +157,14 @@ public class PlayerCon_Script : MonoBehaviour
 
     }
 
-    public void ManageGravityScale(Rigidbody2D ControlGravity)
+    public void SwitchgravityOn()
     {
-        if (ControlGravity.gravityScale == 0)
-        {
-            ControlGravity.gravityScale = gravity;
-        }
-        else
-        {
-            ControlGravity.gravityScale = 0;
-        }
+        playerBodyRb.gravityScale = gravity;
+    }
+
+    public void SwitchgravityOff()
+    {
+        playerBodyRb.gravityScale = 0f;
     }
 
 
