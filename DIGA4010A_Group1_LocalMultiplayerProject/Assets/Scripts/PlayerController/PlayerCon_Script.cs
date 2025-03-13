@@ -102,13 +102,13 @@ public class PlayerCon_Script : MonoBehaviour
         speed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
         float Result = 0;
         Result = speed;
-        Debug.Log(Result);
+        
         
       //  Debug.Log(Xspeed + Yspeed);
         
        // Debug.Log(Yspeed);
 
-        if (moveThis == hammerHeadRb.transform)
+        if (moveThis == hammerHeadRb.transform && !hammerColScript.IsTouchingEnviromentHammer)
         {
             Vector2 allowedPos = new Vector2(initialPos.x + Movement.x, initialPos.y + Movement.y);
             //float mag = Vector2.Distance(allowedPos, anchorPos);
@@ -116,7 +116,9 @@ public class PlayerCon_Script : MonoBehaviour
             Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
             Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
         
-            moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
+           // moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
+           //hammerHeadRb.linearVelocity = finalPos.normalized * 5;
+           hammerHeadRb.MovePosition(finalPos);
         }
         
         else if (moveThis == playerBody)
@@ -129,7 +131,8 @@ public class PlayerCon_Script : MonoBehaviour
                 Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
                 Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
         
-                moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
+                //moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
+                playerBodyRb.MovePosition(finalPos);
             }
             
             else
