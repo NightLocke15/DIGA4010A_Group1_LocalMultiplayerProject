@@ -5,6 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInformationHandler : MonoBehaviour
 {
+    /* 1.
+        Title:
+        Author:
+        Date:
+        Code Version:
+        Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
+        Usage: How to add health bars to the players
+     */
+
+    /* 2.
+        Title:
+        Author:
+        Date:
+        Code Version:
+        Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
+        Usage: How to change the name of an object in code
+     */
 
     #region Upgrades
     //Passive
@@ -19,9 +36,6 @@ public class PlayerInformationHandler : MonoBehaviour
     public bool shield;
     public bool chuckBomb;
     #endregion
-
-    //https://www.youtube.com/watch?v=YJW3TLmckqk for how to add health bar to players
-    //https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5 change name in code
 
     public Slider playerHealth;
     [SerializeField] private GameObject otherPlayer;
@@ -40,18 +54,22 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void Start()
     {
+        //Change the name of the prefab to the relevant player name (one or two) when the prefabs are instantiated in.
         if (GameObject.Find("PlayerObjectOne") == null)
         {
-            this.gameObject.name = "PlayerObjectOne";
+            this.gameObject.name = "PlayerObjectOne"; //2 in references
             this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            this.gameObject.transform.position = new Vector3(-18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         }
         else
         {
             this.gameObject.name = "PlayerObjectTwo";
             this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+            this.gameObject.transform.position = new Vector3(18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         }
 
-        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>();
+        //Accessing the health slider on the player
+        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>(); //1. in references
         playerHealth.value = 100;
     }
 
@@ -59,6 +77,7 @@ public class PlayerInformationHandler : MonoBehaviour
     {
         if (playerHealth.value <= 0)
         {
+            //Opening the relevant UI page connected to the losing player so they can choose their upgrade
             playerLost = true;
             if (this.gameObject.name == "PlayerObjectOne")
             {
@@ -77,6 +96,7 @@ public class PlayerInformationHandler : MonoBehaviour
                 //otherPlayer.transform.GetChild(0).position = new Vector3(-6, 3);
             }
 
+            //Adding one to the player health after losing so the conditions attached to 0 health doesn't block the UI button functionality in the RoundsUI script
             playerHealth.value += 1;
         }
 
@@ -85,6 +105,7 @@ public class PlayerInformationHandler : MonoBehaviour
 
     public void StartGame(InputAction.CallbackContext context)
     {
+        //Getting out of the lobby/waiting room
         if (context.performed)
         {
             startGame = true;

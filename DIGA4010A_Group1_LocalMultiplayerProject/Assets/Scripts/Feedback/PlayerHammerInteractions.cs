@@ -12,6 +12,7 @@ public class PlayerHammerInteractions : MonoBehaviour
             {
                 if (collision.collider.transform.parent.name != this.gameObject.transform.parent.name)
                 {
+                    //Collision that effects the other player and makes their health less by a certain amount
                     collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;
                     Debug.Log("Hit ENemy");
                 }

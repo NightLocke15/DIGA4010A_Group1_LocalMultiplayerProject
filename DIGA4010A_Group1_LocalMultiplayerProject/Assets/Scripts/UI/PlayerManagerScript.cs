@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
-public class test : MonoBehaviour
+public class PlayerManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject playerOne;
     [SerializeField] private GameObject playerTwo;
+    private bool start;
 
     [SerializeField] private TextMeshProUGUI waitingRoomText;
 
@@ -43,11 +44,12 @@ public class test : MonoBehaviour
 
             if (playerOne.GetComponent<PlayerInformationHandler>().startGame == true && playerTwo.GetComponent<PlayerInformationHandler>().startGame == true)
             {
+                playerOne.transform.position = new Vector3(-18, 3);
+                playerTwo.transform.position = new Vector3(18, 3);
                 SceneManager.LoadScene(2);
-                playerOne.transform.position = new Vector3(-6, 3);
-                playerTwo.transform.position = new Vector3(6, 3);
+                
             }
-        }        
+        }      
     }
 
     private void SetPlayers()
