@@ -12,7 +12,7 @@ public class PlayerCon_Script : MonoBehaviour
    [SerializeField] private float innerRadius; //the deadzone where the arms can't go at centre of body
 
    [SerializeField] private Transform playerBody;
-   private Vector2 directionLeft, directionRight;
+   public Vector2 directionLeft, directionRight;
    private Vector2 boostDirection;
    private Vector2 finalDirection;
 
@@ -26,8 +26,10 @@ public class PlayerCon_Script : MonoBehaviour
    [SerializeField] private float gravity = 9.81f;
    [FormerlySerializedAs("HasInput")] [SerializeField] private bool HasLeftInput = false, HasRightInput = false;
 
-   [SerializeField] private float speedBarrier, currentSpeed, force;
-   
+   [SerializeField] private float speedBarrier, force;
+
+    public float currentSpeed;
+
    [SerializeField]
    private Vector2 prevPos, currentPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -102,7 +104,7 @@ public class PlayerCon_Script : MonoBehaviour
         speed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
         float Result = 0;
         Result = speed;
-        Debug.Log(Result);
+        //Debug.Log(Result);
         
       //  Debug.Log(Xspeed + Yspeed);
         
@@ -184,10 +186,12 @@ public class PlayerCon_Script : MonoBehaviour
             directionLeft.x = PlayerInput.x;
             directionLeft.y = PlayerInput.y;
             HasLeftInput = true;
+            this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = true; //Chris addition
         }
         else
         {
             HasLeftInput = false;
+            this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = false; //Chris addition
             directionLeft = Vector2.zero;
         }
     }
@@ -200,10 +204,12 @@ public class PlayerCon_Script : MonoBehaviour
                 directionRight.x = PlayerInput.x;
                 directionRight.y = PlayerInput.y;
                 HasRightInput = true;
+                this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = true; //Chris addition
             }
             else
             {
                 HasRightInput = false;
+                this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = false; //Chris addition
                 directionRight = Vector2.zero;
             }
          //   Vector2 PlayerInput = context.ReadValue<Vector2>();

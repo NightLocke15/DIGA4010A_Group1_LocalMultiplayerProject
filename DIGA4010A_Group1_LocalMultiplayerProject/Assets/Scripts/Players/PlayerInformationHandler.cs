@@ -23,6 +23,15 @@ public class PlayerInformationHandler : MonoBehaviour
         Usage: How to change the name of an object in code
      */
 
+    /* 3.
+        Title:
+        Author:
+        Date:
+        Code Version:
+        Availability: https://www.youtube.com/watch?v=1CXVbCbqKyg
+        Usage: adding dust particles when sliding
+     */
+
     #region Upgrades
     //Passive
     public bool freezeOnCrit;
@@ -46,6 +55,10 @@ public class PlayerInformationHandler : MonoBehaviour
     public bool playerLost = false;
 
     private RoundsUI roundsUIScript;
+
+    [SerializeField] private ParticleSystem dustParticles;
+    [SerializeField] private TrailRenderer weaponTrail;
+    public bool input;
 
     private void Awake()
     {
@@ -71,6 +84,9 @@ public class PlayerInformationHandler : MonoBehaviour
         //Accessing the health slider on the player
         playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>(); //1. in references
         playerHealth.value = 100;
+
+        dustParticles.Pause();
+
     }
 
     private void Update()
@@ -101,6 +117,47 @@ public class PlayerInformationHandler : MonoBehaviour
         }
 
         //FreezeEffect();
+
+        //3. reference
+        //Checking if the player is grounded
+        if (this.gameObject.transform.GetChild(0).GetComponent<GroundCheck>().grounded == true)
+        {
+            //Checking the direction the player is moving in and playing dust particles in the opposite direction
+            if (this.gameObject.transform.GetChild(0).GetComponent<Rigidbody2D>().linearVelocityX > 5)
+            {
+                dustParticles.transform.localScale = new Vector3(1, 1, 1);
+                var emision = dustParticles.emission;
+                emision.rateOverTime = 150;
+                dustParticles.Play();
+            }
+            else if (this.gameObject.transform.GetChild(0).GetComponent<Rigidbody2D>().linearVelocityX < -5)
+            {
+                dustParticles.transform.localScale = new Vector3(-1, 1, 1);
+                var emision = dustParticles.emission;
+                emision.rateOverTime = 150;
+                dustParticles.Play();
+            }
+            else
+            {
+                var emision = dustParticles.emission;
+                emision.rateOverTime = 0;
+            }
+        }
+        else
+        {
+            //Stopping emmision when the player is in the air
+            var emision = dustParticles.emission;
+            emision.rateOverTime = 0;
+        }
+
+        if (input == true)
+        {
+            weaponTrail.emitting = true;
+        }
+        else
+        {
+            weaponTrail.emitting = false;
+        }
     }
 
     public void StartGame(InputAction.CallbackContext context)
@@ -144,7 +201,7 @@ public class PlayerInformationHandler : MonoBehaviour
     }
 
     private void HigherHealth()
-    {
+    { 
 
     }
 
