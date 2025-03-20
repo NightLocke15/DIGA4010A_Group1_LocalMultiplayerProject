@@ -23,6 +23,7 @@ public class RoundsUI : MonoBehaviour
 
     private void Update()
     {
+        //Tracking when a player wins a round. Changes the next one in the list to the relevant colour
         if (playerOneScore == true)
         {
             playerOneWins += 1;
@@ -37,6 +38,7 @@ public class RoundsUI : MonoBehaviour
         }
     }
 
+    //Changes the colour of the circle when a player has won
     private void RoundWon(Color32 colour)
     {
         for (int i = 0; i < rounds.Count; i++)
