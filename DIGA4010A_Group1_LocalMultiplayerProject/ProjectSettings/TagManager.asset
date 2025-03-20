@@ -9,13 +9,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Hammer
+  - HammerOne
   - Water
   - UI
-  - PlayerBody
+  - PlayerBodyOne
   - Enviroment
-  - 
-  - 
+  - HammerTwo
+  - PlayerBodyTwo
   - 
   - 
   - 

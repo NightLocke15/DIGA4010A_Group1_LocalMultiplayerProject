@@ -23,7 +23,7 @@ public class HammerBehaviour : MonoBehaviour
     void Update()
     {
        //Rotates the hammer head
-        Vector2 Lookdir = BodyCentre.position - hammerHeadRb.transform.position;
+        Vector2 Lookdir = hammerEndRb.transform.position - hammerHeadRb.transform.position;
         float angle = Mathf.Atan2(Lookdir.y, Lookdir.x) * Mathf.Rad2Deg-adjustHead;
         hammerHeadRb.rotation = angle;
         
