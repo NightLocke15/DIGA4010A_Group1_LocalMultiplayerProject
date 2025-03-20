@@ -216,8 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 8852404898414201316}
-  wallSquash: {x: 1.66, y: 0.7, z: 0.1}
-  m_SpriteRenderer: {fileID: 962054308703991634}
 --- !u!1 &1097191999817462703
 GameObject:
   m_ObjectHideFlags: 0
@@ -10777,7 +10775,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &347074967558700971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10791,7 +10789,7 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 2939c9ccd672d5b4993acaada8da8efd, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10970,7 +10968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BodyCentre: {fileID: 3438122892021310251}
   hammerHeadRb: {fileID: 4870372215241388669}
-  hammerEndRb: {fileID: 0}
+  hammerEndRb: {fileID: 8852404898414201316}
   adjustHead: -90
   adjustEnd: 45
   PoleLenght: 0
@@ -10999,3 +10997,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
+  knockBackSpeed: 100

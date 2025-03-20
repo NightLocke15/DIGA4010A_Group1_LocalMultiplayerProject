@@ -71,12 +71,18 @@ public class PlayerInformationHandler : MonoBehaviour
         if (GameObject.Find("PlayerObjectOne") == null)
         {
             this.gameObject.name = "PlayerObjectOne"; //2 in references
+            this.transform.GetChild(0).gameObject.layer = 6;
+            this.transform.GetChild(1).gameObject.layer = 3;
+            //this.transform.GetChild(1).GetComponent<BoxCollider2D>().includeLayers = 0;
             this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
             this.gameObject.transform.position = new Vector3(-18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         }
         else
         {
             this.gameObject.name = "PlayerObjectTwo";
+            this.transform.GetChild(0).gameObject.layer = 9;
+            this.transform.GetChild(1).gameObject.layer = 8;
+            //this.transform.GetChild(1).GetComponent<BoxCollider2D>().includeLayers = 3 | 6;
             this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
             this.gameObject.transform.position = new Vector3(18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         }
