@@ -60,6 +60,16 @@ public class UIHandler : MonoBehaviour
         playButton.Select();
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene(0); //Takes players back to menu
+    }
+
+    public void Replay()
+    {
+        SceneManager.LoadScene(1); //Takes players back to waiting room
+    }
+
     /*public void Stages() //The players can choose game mode they would like to play on this game.
     {
 
