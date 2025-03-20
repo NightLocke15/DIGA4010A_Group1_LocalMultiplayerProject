@@ -97,14 +97,14 @@ ScriptedImporter:
   layeredSpriteImportData:
   - name: Left Arm
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.69443727, y: 0.9379524}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 277
+      x: 7
+      y: 276
       width: 72
       height: 170
     spriteID: 067040fe55188ae43866ddbd660191f4
@@ -163,8 +163,8 @@ ScriptedImporter:
     spritePosition: {x: 59, y: 130}
   - name: Right Arm
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.27021068, y: 0.94543886}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
