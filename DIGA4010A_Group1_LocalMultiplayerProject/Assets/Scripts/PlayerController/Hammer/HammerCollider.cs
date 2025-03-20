@@ -21,10 +21,13 @@ public class HammerCollider : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+     Vector2 ContactPos = transform.localPosition;
         if (other.collider.tag == "Enviroment")
         {
             IsTouchingEnviromentHammer = true;
             playerScript.SwitchgravityOff();
+            hammerRb.linearVelocity = Vector2.zero;
+            transform.localPosition = ContactPos;
         }
     }
 
