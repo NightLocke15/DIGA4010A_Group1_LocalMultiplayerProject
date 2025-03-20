@@ -94,9 +94,9 @@ public class PlayerCon_Script : MonoBehaviour
 
     private void ApplyMovement(Transform moveThis,Transform AnchorPoint, float inverseDirection)
     {
-        currentPos = playerBody.localPosition;
+        currentPos = playerBody.position;
         Vector2 anchorPos = Vector2.zero;
-        Vector2 AdjustIP = new Vector2(moveThis.localPosition.x- AnchorPoint.localPosition.x, moveThis.localPosition.y- AnchorPoint.localPosition.y);
+        Vector2 AdjustIP = new Vector2(moveThis.position.x- AnchorPoint.position.x, moveThis.position.y- AnchorPoint.position.y);
         Vector2 initialPos = new Vector2(anchorPos.x+ AdjustIP.x, anchorPos.y + AdjustIP.y);
         Vector2 direction = new Vector2(directionLeft.x + directionRight.x, directionLeft.y + directionRight.y); 
         Vector2 Movement = (new Vector2(direction.x * moveSpeed, direction.y * moveSpeed)*Time.deltaTime) * inverseDirection;
@@ -116,7 +116,7 @@ public class PlayerCon_Script : MonoBehaviour
             //float mag = Vector2.Distance(allowedPos, anchorPos);
             Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
             Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
-            Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
+            Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.position.x, restrictPos.y+ AnchorPoint.position.y);
         
            // moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
            //hammerHeadRb.linearVelocity = finalPos.normalized * 5;
@@ -131,7 +131,7 @@ public class PlayerCon_Script : MonoBehaviour
                 //float mag = Vector2.Distance(allowedPos, anchorPos);
                 Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
                 Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
-                Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
+                Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.position.x, restrictPos.y+ AnchorPoint.position.y);
         
                 //moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
                 playerBodyRb.MovePosition(finalPos);
