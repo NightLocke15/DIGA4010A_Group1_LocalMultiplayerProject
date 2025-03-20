@@ -98,10 +98,9 @@ public class PlayerCon_Script : MonoBehaviour
         Vector2 initialPos = new Vector2(anchorPos.x+ AdjustIP.x, anchorPos.y + AdjustIP.y);
         Vector2 direction = new Vector2(directionLeft.x + directionRight.x, directionLeft.y + directionRight.y); 
         Vector2 Movement = (new Vector2(direction.x * moveSpeed, direction.y * moveSpeed)*Time.deltaTime) * inverseDirection;
-        float speed = 0;
-        speed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
+        currentSpeed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
         float Result = 0;
-        Result = speed;
+        Result = currentSpeed;
         
         
       //  Debug.Log(Xspeed + Yspeed);
