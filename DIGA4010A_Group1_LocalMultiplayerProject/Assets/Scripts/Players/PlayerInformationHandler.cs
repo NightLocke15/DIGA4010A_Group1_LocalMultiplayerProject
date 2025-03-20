@@ -83,7 +83,7 @@ public class PlayerInformationHandler : MonoBehaviour
 
         //Accessing the health slider on the player
         playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>(); //1. in references
-        playerHealth.value = 100;
+        playerHealth.value = playerHealth.maxValue;
 
         dustParticles.Pause();
 
@@ -197,12 +197,13 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void HigherKnockBack()
     {
-
+        Knockback knockBackSpeed = this.gameObject.transform.GetChild(1).GetComponent<Knockback>();
+        knockBackSpeed.knockBackSpeed = 120;
     }
 
     private void HigherHealth()
-    { 
-
+    {
+        playerHealth.maxValue = 120;
     }
 
     private void FasterMovingWeapon()

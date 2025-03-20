@@ -99,8 +99,8 @@ public class PlayerUpgrades : MonoBehaviour
             playerTwo.transform.GetChild(0).position = new Vector3(6, 3);
 
             //Sets the health of the players back to full
-            playerOne.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
-            playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;   
+            playerOne.GetComponent<PlayerInformationHandler>().playerHealth.value = playerOne.GetComponent<PlayerInformationHandler>().playerHealth.maxValue;
+            playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.value = playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.maxValue;   
             
             //Enables the player's movements again
             playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
@@ -121,8 +121,8 @@ public class PlayerUpgrades : MonoBehaviour
             playerOne.transform.GetChild(0).position = new Vector3(-6, 3);
             playerTwo.transform.GetChild(0).position = new Vector3(6, 3);
 
-            playerOne.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
-            playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.value = 100;
+            playerOne.GetComponent<PlayerInformationHandler>().playerHealth.value = playerOne.GetComponent<PlayerInformationHandler>().playerHealth.maxValue;
+            playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.value = playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.maxValue;
 
             playerOne.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;
             playerTwo.transform.GetChild(0).GetComponent<PlayerCon_Script>().enabled = true;

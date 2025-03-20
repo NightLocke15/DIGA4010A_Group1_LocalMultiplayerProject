@@ -171,7 +171,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -210,12 +210,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962054308703991634}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ce2d8921194f954e8e5914be75e39b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 8852404898414201316}
+  wallSquash: {x: 1.66, y: 0.7, z: 0.1}
+  m_SpriteRenderer: {fileID: 962054308703991634}
 --- !u!1 &1097191999817462703
 GameObject:
   m_ObjectHideFlags: 0

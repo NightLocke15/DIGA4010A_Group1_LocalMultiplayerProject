@@ -4,6 +4,7 @@ public class Knockback : MonoBehaviour
 {
     [SerializeField] private GameObject otherPlayer;
     private Vector2 force = new Vector2(20, 0);
+    public float knockBackSpeed = 100;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,11 +20,11 @@ public class Knockback : MonoBehaviour
                 //Debug.Log("PlayerOne: " + this.gameObject.GetComponent<Rigidbody2D>().linearVelocity.magnitude);
                 if (otherPlayer.transform.GetChild(0).position.x > this.transform.position.x)
                 {
-                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(otherPlayer.transform.right * 100, ForceMode2D.Impulse);
+                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(otherPlayer.transform.right * knockBackSpeed, ForceMode2D.Impulse);
                 }
                 else if (otherPlayer.transform.GetChild(0).position.x < this.transform.position.x)
                 {
-                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(-otherPlayer.transform.right * 100, ForceMode2D.Impulse);
+                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(-otherPlayer.transform.right * knockBackSpeed, ForceMode2D.Impulse);
                 }
                 
             }
@@ -37,11 +38,11 @@ public class Knockback : MonoBehaviour
                 //Debug.Log("PlayerTwo: " + this.gameObject.GetComponent<Rigidbody2D>().linearVelocity.magnitude);
                 if (otherPlayer.transform.GetChild(0).position.x > this.transform.position.x)
                 {
-                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(otherPlayer.transform.right * 100, ForceMode2D.Impulse);
+                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(otherPlayer.transform.right * knockBackSpeed, ForceMode2D.Impulse);
                 }
                 else if (otherPlayer.transform.GetChild(0).position.x < this.transform.position.x)
                 {
-                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(-otherPlayer.transform.right * 100, ForceMode2D.Impulse);
+                    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(-otherPlayer.transform.right * knockBackSpeed, ForceMode2D.Impulse);
                 }
             }
             else if (collision.collider.transform.parent.name == "PlayerObjectTwo")
