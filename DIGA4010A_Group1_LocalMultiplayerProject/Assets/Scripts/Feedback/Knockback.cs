@@ -8,7 +8,9 @@ public class Knockback : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (this.gameObject.transform.parent.name == "PlayerObjectOne")
+        if (collision.transform.parent != null)
+        {
+            if (this.gameObject.transform.parent.name == "PlayerObjectOne")
         {
             otherPlayer = GameObject.Find("PlayerObjectTwo");
             if (collision.collider.transform.parent.name == "PlayerObjectOne")
@@ -49,6 +51,7 @@ public class Knockback : MonoBehaviour
             {
                 
             }
+        }
         }
         
     }
