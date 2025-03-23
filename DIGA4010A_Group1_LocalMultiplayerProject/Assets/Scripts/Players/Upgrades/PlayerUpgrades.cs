@@ -5,15 +5,6 @@ using UnityEngine.InputSystem.UI;
 
 public class PlayerUpgrades : MonoBehaviour
 {
-    /* 1.
-        Title:
-        Author:
-        Date:
-        Code Version:
-        Availability: https://discussions.unity.com/t/how-can-multiple-users-control-a-single-ui-canvas-using-inputsystem/245974
-        Usage: Helped me figure out how to get one user only to use a certain part of the UI
-     */
-
     [SerializeField] private GameObject playerOne;
     [SerializeField] private GameObject playerTwo;
 
@@ -54,8 +45,16 @@ public class PlayerUpgrades : MonoBehaviour
             //Makes the Losing player's action map the one used to use the UI
             playerOne.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "Menu";
 
+            /*
+            Title: How can multiple users control a single UI canvas using InputSystem?
+            Author: AlbertoVgdd
+            Date: May 2021
+            Availability: https://discussions.unity.com/t/how-can-multiple-users-control-a-single-ui-canvas-using-inputsystem/245974
+            Usage: Helped me figure out how to get one user only to use a certain part of the UI (Used this in else if as well)
+            */
+
             //Makes the Event system use the action map attached to the relevant player
-            eventSystymObject.GetComponent<InputSystemUIInputModule>().actionsAsset = playerOne.transform.GetChild(0).GetComponent<PlayerInput>().actions; //1. in references
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().actionsAsset = playerOne.transform.GetChild(0).GetComponent<PlayerInput>().actions; 
 
             //Sets the relevant actions to the eventsystem actions needed to traverse the UI, like moc=ving between the buttons and selecting them
             eventSystymObject.GetComponent<InputSystemUIInputModule>().move = InputActionReference.Create(playerOne.transform.GetChild(0)

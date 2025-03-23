@@ -8,7 +8,7 @@ public class UIHandler : MonoBehaviour
     private GameObject howToPlayPanel;
     private GameObject creditsPanel;
 
-    //https://www.youtube.com/watch?v=Hn804Wgr3KE <-- reference for button select stuff
+    // <-- reference for button select stuff
 
     [SerializeField] private Button playButton;
     [SerializeField] private Button backCButton;
@@ -38,6 +38,13 @@ public class UIHandler : MonoBehaviour
         menuPanel.SetActive(false);
         howToPlayPanel.SetActive(true);
 
+        /*
+        Title: Controller and Keyboard Menu Navigation w/ Input System - Unity Tutorial
+        Author: samyam
+        Date: 20 Mar 2021
+        Availability: https://www.youtube.com/watch?v=Hn804Wgr3KE
+        Usage: How to get the right button to select at the right time  to set up controllers to move through UI
+        */
         backHButton.Select();
     }
 

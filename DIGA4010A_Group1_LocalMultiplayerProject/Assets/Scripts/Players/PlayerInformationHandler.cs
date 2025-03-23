@@ -5,33 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInformationHandler : MonoBehaviour
 {
-    /* 1.
-        Title:
-        Author:
-        Date:
-        Code Version:
-        Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
-        Usage: How to add health bars to the players
-     */
-
-    /* 2.
-        Title:
-        Author:
-        Date:
-        Code Version:
-        Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
-        Usage: How to change the name of an object in code
-     */
-
-    /* 3.
-        Title:
-        Author:
-        Date:
-        Code Version:
-        Availability: https://www.youtube.com/watch?v=1CXVbCbqKyg
-        Usage: adding dust particles when sliding
-     */
-
     #region Upgrades
     //Passive
     public bool freezeOnCrit;
@@ -67,10 +40,17 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void Start()
     {
+        /*
+        Title: Change Game Object’s name when in runtime
+        Author: Marrrk
+        Date: May 2011
+        Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
+        Usage: How to change the name of an object in code
+        */
         //Change the name of the prefab to the relevant player name (one or two) when the prefabs are instantiated in.
         if (GameObject.Find("PlayerObjectOne") == null)
         {
-            this.gameObject.name = "PlayerObjectOne"; //2 in references
+            this.gameObject.name = "PlayerObjectOne"; 
             this.transform.GetChild(0).gameObject.layer = 6;
             this.transform.GetChild(1).gameObject.layer = 3;
             //this.transform.GetChild(1).GetComponent<BoxCollider2D>().includeLayers = 0;
@@ -87,8 +67,16 @@ public class PlayerInformationHandler : MonoBehaviour
             this.gameObject.transform.position = new Vector3(18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         }
 
+        /*
+        Title: How to Add Health Bar to Players in Unity!
+        Author: Kory Code
+        Date: 10 Jun 2022
+        Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
+        Usage: How to add health bars to the players
+        */
+
         //Accessing the health slider on the player
-        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>(); //1. in references
+        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>(); 
         playerHealth.value = playerHealth.maxValue;
 
         dustParticles.Pause();
@@ -124,7 +112,13 @@ public class PlayerInformationHandler : MonoBehaviour
 
         //FreezeEffect();
 
-        //3. reference
+        /* 
+        Title: Dust Effect when Running & Jumping in Unity [Particle Effect]
+        Author: Press Start
+        Date: 1 Sept 2019
+        Availability: https://www.youtube.com/watch?v=1CXVbCbqKyg
+        Usage: adding dust particles when sliding
+        */
         //Checking if the player is grounded
         if (this.gameObject.transform.GetChild(0).GetComponent<GroundCheck>().grounded == true)
         {
