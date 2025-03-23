@@ -92,7 +92,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
             ""id"": ""804b2aee-23ba-4872-bf50-d50a89750742"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Left"",
                     ""type"": ""Value"",
                     ""id"": ""6dd86962-3e36-41ae-80b0-3efbaec41050"",
                     ""expectedControlType"": ""Vector2"",
@@ -101,7 +101,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Boost"",
+                    ""name"": ""Right"",
                     ""type"": ""Value"",
                     ""id"": ""8c65a6fe-b4dc-47b6-9503-19ababdfcac8"",
                     ""expectedControlType"": ""Vector2"",
@@ -117,6 +117,15 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActivateAbility"",
+                    ""type"": ""Button"",
+                    ""id"": ""e33d104b-002f-4d6a-a89f-41adfd0be119"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -127,7 +136,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Controller"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -138,7 +147,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Joystick"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -149,7 +158,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Left"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -160,7 +169,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -171,7 +180,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -182,7 +191,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -193,7 +202,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Movement"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -204,7 +213,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": ""NormalizeVector2"",
                     ""groups"": "";Controller"",
-                    ""action"": ""Boost"",
+                    ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -215,7 +224,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Boost"",
+                    ""action"": ""Right"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -226,7 +235,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Boost"",
+                    ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -237,7 +246,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Boost"",
+                    ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -248,7 +257,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Boost"",
+                    ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -259,7 +268,7 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard+Mouse"",
-                    ""action"": ""Boost"",
+                    ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -282,6 +291,28 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""StartGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f7fa61ea-220f-4e76-bdd1-e972f493238d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard+Mouse"",
+                    ""action"": ""ActivateAbility"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8fadaac3-14fe-41ca-9653-e6d0931c1f43"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard+Mouse"",
+                    ""action"": ""ActivateAbility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -423,9 +454,10 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
 }");
         // PlayerController
         m_PlayerController = asset.FindActionMap("PlayerController", throwIfNotFound: true);
-        m_PlayerController_Movement = m_PlayerController.FindAction("Movement", throwIfNotFound: true);
-        m_PlayerController_Boost = m_PlayerController.FindAction("Boost", throwIfNotFound: true);
+        m_PlayerController_Left = m_PlayerController.FindAction("Left", throwIfNotFound: true);
+        m_PlayerController_Right = m_PlayerController.FindAction("Right", throwIfNotFound: true);
         m_PlayerController_StartGame = m_PlayerController.FindAction("StartGame", throwIfNotFound: true);
+        m_PlayerController_ActivateAbility = m_PlayerController.FindAction("ActivateAbility", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Navigation = m_Menu.FindAction("Navigation", throwIfNotFound: true);
@@ -511,9 +543,10 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
     // PlayerController
     private readonly InputActionMap m_PlayerController;
     private List<IPlayerControllerActions> m_PlayerControllerActionsCallbackInterfaces = new List<IPlayerControllerActions>();
-    private readonly InputAction m_PlayerController_Movement;
-    private readonly InputAction m_PlayerController_Boost;
+    private readonly InputAction m_PlayerController_Left;
+    private readonly InputAction m_PlayerController_Right;
     private readonly InputAction m_PlayerController_StartGame;
+    private readonly InputAction m_PlayerController_ActivateAbility;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerController".
     /// </summary>
@@ -526,17 +559,21 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
         /// </summary>
         public PlayerControllerActions(@PL_Controller wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "PlayerController/Movement".
+        /// Provides access to the underlying input action "PlayerController/Left".
         /// </summary>
-        public InputAction @Movement => m_Wrapper.m_PlayerController_Movement;
+        public InputAction @Left => m_Wrapper.m_PlayerController_Left;
         /// <summary>
-        /// Provides access to the underlying input action "PlayerController/Boost".
+        /// Provides access to the underlying input action "PlayerController/Right".
         /// </summary>
-        public InputAction @Boost => m_Wrapper.m_PlayerController_Boost;
+        public InputAction @Right => m_Wrapper.m_PlayerController_Right;
         /// <summary>
         /// Provides access to the underlying input action "PlayerController/StartGame".
         /// </summary>
         public InputAction @StartGame => m_Wrapper.m_PlayerController_StartGame;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerController/ActivateAbility".
+        /// </summary>
+        public InputAction @ActivateAbility => m_Wrapper.m_PlayerController_ActivateAbility;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -563,15 +600,18 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerControllerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerControllerActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
-            @Boost.started += instance.OnBoost;
-            @Boost.performed += instance.OnBoost;
-            @Boost.canceled += instance.OnBoost;
+            @Left.started += instance.OnLeft;
+            @Left.performed += instance.OnLeft;
+            @Left.canceled += instance.OnLeft;
+            @Right.started += instance.OnRight;
+            @Right.performed += instance.OnRight;
+            @Right.canceled += instance.OnRight;
             @StartGame.started += instance.OnStartGame;
             @StartGame.performed += instance.OnStartGame;
             @StartGame.canceled += instance.OnStartGame;
+            @ActivateAbility.started += instance.OnActivateAbility;
+            @ActivateAbility.performed += instance.OnActivateAbility;
+            @ActivateAbility.canceled += instance.OnActivateAbility;
         }
 
         /// <summary>
@@ -583,15 +623,18 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
         /// <seealso cref="PlayerControllerActions" />
         private void UnregisterCallbacks(IPlayerControllerActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
-            @Boost.started -= instance.OnBoost;
-            @Boost.performed -= instance.OnBoost;
-            @Boost.canceled -= instance.OnBoost;
+            @Left.started -= instance.OnLeft;
+            @Left.performed -= instance.OnLeft;
+            @Left.canceled -= instance.OnLeft;
+            @Right.started -= instance.OnRight;
+            @Right.performed -= instance.OnRight;
+            @Right.canceled -= instance.OnRight;
             @StartGame.started -= instance.OnStartGame;
             @StartGame.performed -= instance.OnStartGame;
             @StartGame.canceled -= instance.OnStartGame;
+            @ActivateAbility.started -= instance.OnActivateAbility;
+            @ActivateAbility.performed -= instance.OnActivateAbility;
+            @ActivateAbility.canceled -= instance.OnActivateAbility;
         }
 
         /// <summary>
@@ -779,19 +822,19 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
     public interface IPlayerControllerActions
     {
         /// <summary>
-        /// Method invoked when associated input action "Movement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Left" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMovement(InputAction.CallbackContext context);
+        void OnLeft(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Boost" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Right" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnBoost(InputAction.CallbackContext context);
+        void OnRight(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "StartGame" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
@@ -799,6 +842,13 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnStartGame(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ActivateAbility" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnActivateAbility(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Menu" which allows adding and removing callbacks.

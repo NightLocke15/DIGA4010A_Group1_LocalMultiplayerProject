@@ -156,7 +156,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6984659141054112291}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -198,9 +198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  timeToExplode: 5
+  timeToExplode: 10
+  timeToSwitchOnCollider: 1
   bouncesTillExplode: 10
   timedDetonation: 0
-  bouncedDetonation: 0
+  bouncedDetonation: 1
   explodeOnPlayer: 1
   StartTime: 0
