@@ -18,15 +18,15 @@ public class PlayerOnPlayerInteractions : MonoBehaviour
                     //Collision that effects the other player and makes their health less by a certain amount
                     if (SceneManager.GetActiveScene().name == "StageZero")
                         {
-                        if (this.gameObject.GetComponent<Rigidbody2D>().linearVelocity.magnitude < 1)
+                        if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed < 15)
                         {
                             collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;
                         }
-                        else if (this.gameObject.GetComponent<Rigidbody2D>().linearVelocity.magnitude >= 1 && this.gameObject.GetComponent<Rigidbody2D>().linearVelocity.magnitude < 5)
+                        else if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed >= 15 && this.gameObject.GetComponent<PlayerCon_Script>().currentSpeed < 25)
                         {
                             collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 10;
                         }
-                        else if (this.gameObject.GetComponent<Rigidbody2D>().linearVelocity.magnitude >= 5)
+                        else if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed >= 25)
                         {
                             Debug.Log("critical hit");
                             collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 20;
@@ -35,7 +35,7 @@ public class PlayerOnPlayerInteractions : MonoBehaviour
                         
                         
 
-                        collision.collider.transform.GetChild(0).localScale = Vector3.Lerp(collision.collider.transform.GetChild(0).localScale, new Vector3(1.5f, 0.5f, 1), Time.deltaTime*100);
+                        collision.collider.transform.GetChild(0).localScale = Vector3.Lerp(collision.collider.transform.GetChild(0).localScale, new Vector3(1.5f, 0.8f, 1), Time.deltaTime*100);
                         slam.Play();
 
                         GameObject floor = GameObject.Find("Floor");

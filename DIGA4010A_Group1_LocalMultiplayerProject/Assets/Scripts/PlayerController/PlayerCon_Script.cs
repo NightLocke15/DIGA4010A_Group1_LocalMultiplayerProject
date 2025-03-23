@@ -103,6 +103,7 @@ public class PlayerCon_Script : MonoBehaviour
         currentSpeed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
         float Result = 0;
         Result = currentSpeed;
+        Debug.Log(Result);
         
         
       //  Debug.Log(Xspeed + Yspeed);

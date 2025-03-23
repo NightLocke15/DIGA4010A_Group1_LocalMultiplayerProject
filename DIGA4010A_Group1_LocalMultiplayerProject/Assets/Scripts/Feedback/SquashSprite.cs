@@ -4,10 +4,14 @@ using System.Collections.Generic;
 
 public class SquashSprite : MonoBehaviour
 {
+
+
+
+
 	// https://github.com/keenanwoodall/SimpleSquashAndStretchMovement2D/blob/master/Assets/_SnSMovement/Code/Components/General/Transform/ScaleByVelocity.cs
 
-	[SerializeField] private Rigidbody2D rigidBody;
-	private Vector2 ogScale;
+	//[SerializeField] private Rigidbody2D rigidBody;
+	//private Vector2 ogScale;
 
     //all the struggles
 

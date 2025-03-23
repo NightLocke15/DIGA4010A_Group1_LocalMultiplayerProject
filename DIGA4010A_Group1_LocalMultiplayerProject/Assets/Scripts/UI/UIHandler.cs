@@ -16,15 +16,19 @@ public class UIHandler : MonoBehaviour
 
     private void Start()
     {
-        //Finding all the menu Panels
-        menuPanel = GameObject.Find("Menu");
-        howToPlayPanel = GameObject.Find("HowToPlay");
-        creditsPanel = GameObject.Find("Credits");
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            //Finding all the menu Panels
+            menuPanel = GameObject.Find("Menu");
+            howToPlayPanel = GameObject.Find("HowToPlay");
+            creditsPanel = GameObject.Find("Credits");
 
-        //Setiing up the menu for when the game starts
-        menuPanel.SetActive(true);
-        howToPlayPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+            //Setiing up the menu for when the game starts
+            menuPanel.SetActive(true);
+            howToPlayPanel.SetActive(false);
+            creditsPanel.SetActive(false);
+        }
+        
     }
 
     public void PlayGame() //Playing the game
