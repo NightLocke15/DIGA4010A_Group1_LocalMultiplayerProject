@@ -13,25 +13,25 @@ public class PlayerOnPlayerInteractions : MonoBehaviour
             {
                 if (collision.collider.transform.parent.name != this.gameObject.transform.parent.name)
                 {
-                    if (this.gameObject.transform.position.y > collision.collider.transform.position.y + 0.5f)
+                    if (this.gameObject.transform.position.y > collision.collider.transform.position.y + 0.9f)
                     {
-                    //Collision that effects the other player and makes their health less by a certain amount
-                    if (SceneManager.GetActiveScene().name == "StageZero")
-                        {
-                        if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed < 15)
-                        {
-                            collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;
+                        //Collision that effects the other player and makes their health less by a certain amount
+                        if (SceneManager.GetActiveScene().name == "StageZero")
+                            {
+                            if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed < 15)
+                            {
+                                collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;
+                            }
+                            else if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed >= 15 && this.gameObject.GetComponent<PlayerCon_Script>().currentSpeed < 25)
+                            {
+                                collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 10;
+                            }
+                            else if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed >= 25)
+                            {
+                                Debug.Log("critical hit");
+                                collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 20;
+                            }
                         }
-                        else if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed >= 15 && this.gameObject.GetComponent<PlayerCon_Script>().currentSpeed < 25)
-                        {
-                            collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 10;
-                        }
-                        else if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed >= 25)
-                        {
-                            Debug.Log("critical hit");
-                            collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 20;
-                        }
-                    }
                         
                         
 
