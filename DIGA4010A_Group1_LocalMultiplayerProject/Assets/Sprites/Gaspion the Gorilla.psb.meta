@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: e0cf775072891594ba5c61af8e425cb8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: cd4792f8011dc0b42bc11e09c98c5930
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Colour LA
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 516
+      width: 156
+      height: 324
+    spriteID: 222ffa091c609064481d0c49b8be7d2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 516}
+    spritePosition: {x: 74, y: 170}
+  - name: Pot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 350
+      y: 4
+      width: 398
+      height: 278
+    spriteID: 1312affe6f6446146a70585853c46c0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 350, y: 4}
+    spritePosition: {x: 92, y: 5}
+  - name: Colour B
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 338
+      height: 504
+    spriteID: e659e48a550a1a84dbeeffd9bf90e80a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 149, y: 261}
+  - name: Colour RA
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 168
+      y: 516
+      width: 139
+      height: 318
+    spriteID: 6101029e9f52ecf47bd28d70293eeaf7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 168, y: 516}
+    spritePosition: {x: 382, y: 168}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Merged Gaspion
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 1b059c239e7776443842101fa7b8f873
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Colour LA
+    spriteName: Colour LA
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 222ffa091c609064481d0c49b8be7d2d
+    layerID: 1773092613
+    mosaicPosition: {x: 4, y: 516}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pot
+    spriteName: Pot
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1312affe6f6446146a70585853c46c0a
+    layerID: 728637043
+    mosaicPosition: {x: 350, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Colour B
+    spriteName: Colour B
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e659e48a550a1a84dbeeffd9bf90e80a
+    layerID: -69201208
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Colour RA
+    spriteName: Colour RA
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6101029e9f52ecf47bd28d70293eeaf7
+    layerID: -1332482409
+    mosaicPosition: {x: 168, y: 516}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gaspion Full Body
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 91095688741ab6844986e91f2b965722
+    layerID: 2011692606
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Left Arm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: e33e5666a18285b488215a0f684d0bee
+    layerID: -415896235
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Colour LA
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 4a4006c650edc234997ed8f87a4d28c7
+    layerID: -1046187789
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Pot
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: de4468c70f8198d478f23457849c61c7
+    layerID: 553763397
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Body
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: fdbc85b122ac2c943a7eca1e09a3cdf4
+    layerID: -723767166
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Colour B
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: ea2a38c8285f4be4594b51395d93b725
+    layerID: -885569600
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Right Arm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: a3f8888fc5327194d8ed71ba2024fa1c
+    layerID: 1268088182
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Colour RA
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 788a4ac4de5e7d34eb1a5843941a6b87
+    layerID: -1875869851
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Merged(Old)
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 20ea94401c7108440a8c4ac24ce795c6
+    layerID: -1445524390
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Left Arm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 09dfae0f98b70cc4787b10e22d649f06
+    layerID: 1156545807
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Pot
+    spriteName: 
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 444c3dee9f0ebc947863cb85ca409dcb
+    layerID: 150478870
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Body
+    spriteName: 
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 723e9e495dcb10048b7a4e3f73d9ea99
+    layerID: -1932290066
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Right Arm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 86c013f0072b376429a3a0a34cc5b382
+    layerID: -249139782
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Full Body
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 358a5d8e0c44346479118feec58e7556
+    layerID: 2117524347
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Left arm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: eae0fb08f9d418b49a05ae418d105c3d
+    layerID: -678534923
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Paint Layer 1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: afda44fa2c22f6f4abf745fb2b54bd2f
+    layerID: 1139611364
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Pot
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: dc3c3b979ed4aa24599a1af32c2423a9
+    layerID: 1716562811
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Paint Layer 4
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: 566d55b1272909842a4b345d99f78f9f
+    layerID: 1139611361
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Body
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: a8cc652dc8200c443b4c20a5da7456ef
+    layerID: -1932290067
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Paint Layer 2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: 154f9cd756e74984a9884fce8b5ece0f
+    layerID: 1139611363
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Right arm
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: 0cc0b3e9ed7915e4fb88aad2bef97f01
+    layerID: 1268089174
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Paint Layer 5
+    spriteName: 
+    isGroup: 0
+    parentIndex: 18
+    spriteID: 6b29bc12103e29a4f862582e81ff914a
+    layerID: 1139611360
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: rough sketch
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2edd75f0f4265394284ae0c736720010
+    layerID: -1505130655
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: rough sketch
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 783ed9619f54125478b9686208cbeae4
+    layerID: 1897147143
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Background
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6ee7ca445695f1347b8d66437af14c1f
+    layerID: -1498723586
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
