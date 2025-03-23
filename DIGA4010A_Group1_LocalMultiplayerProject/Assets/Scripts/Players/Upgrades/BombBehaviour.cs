@@ -69,7 +69,7 @@ public class BombBehaviour : MonoBehaviour
 
         if (explodeOnPlayer && other.gameObject.tag == "Player")
         {
-            //add the damage
+            other.collider.GetComponent<PlayerInformationHandler>().playerHealth.value -= 30;
             activateAbility.TestKnockback(transform, speed);
             BombGoesBoom();
         }

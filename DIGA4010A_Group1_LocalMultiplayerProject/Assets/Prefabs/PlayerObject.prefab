@@ -11033,3 +11033,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
   knockBackSpeed: 100
+  activateAbility: {fileID: 1408358034398507974}
+  playerConScript: {fileID: 5716477992334461125}

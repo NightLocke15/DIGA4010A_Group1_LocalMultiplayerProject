@@ -308,10 +308,10 @@ public partial class @PL_Controller: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8fadaac3-14fe-41ca-9653-e6d0931c1f43"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard+Mouse"",
+                    ""groups"": "";Controller"",
                     ""action"": ""ActivateAbility"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
