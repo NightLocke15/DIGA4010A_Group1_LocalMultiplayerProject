@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1015ce5c-144e-4f45-9deb-ea1478690d1b}">
+		<property name="assetPath">
+			<value>Gorilla/grunt-1-85280.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.4399999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{614b51bd-04ce-4fe1-bc30-f58957540c9d}</destination>
+		</relationship>
+	</object>
+</objects>

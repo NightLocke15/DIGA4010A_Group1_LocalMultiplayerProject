@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{8e4221ae-14d8-4aaa-9cd7-d831aed15ee2}">
+		<property name="assetPath">
+			<value>Gorilla/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{614b51bd-04ce-4fe1-bc30-f58957540c9d}</destination>
+		</relationship>
+	</object>
+</objects>
