@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 93d165c9367ee04499aed325f365c82e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7816543612350041203
+    second: OneWin_0
+  - first:
+      213: -2375424916557050819
+    second: OneWin_1
+  - first:
+      213: -5790056426696889339
+    second: OneWin_2
+  - first:
+      213: -2248417424887639460
+    second: OneWin_3
+  - first:
+      213: 7119666403191312338
+    second: OneWin_4
+  - first:
+      213: 397568955774238321
+    second: OneWin_5
+  - first:
+      213: -6900737334698874493
+    second: OneWin_6
+  - first:
+      213: 1694166878953172479
+    second: OneWin_7
+  - first:
+      213: -6260185399878148461
+    second: OneWin_8
+  - first:
+      213: -5865213166454851384
+    second: OneWin_9
+  - first:
+      213: -2583829789674719081
+    second: OneWin_10
+  - first:
+      213: -1681961986270701579
+    second: OneWin_11
+  - first:
+      213: -6904619024882671892
+    second: OneWin_12
+  - first:
+      213: 3107761332271986065
+    second: OneWin_13
+  - first:
+      213: -7049033614339414029
+    second: OneWin_14
+  - first:
+      213: -1795046820997219373
+    second: OneWin_15
+  - first:
+      213: 5143257326272403987
+    second: OneWin_16
+  - first:
+      213: 3444493044889149337
+    second: OneWin_17
+  - first:
+      213: -1588692816593771492
+    second: OneWin_18
+  - first:
+      213: 8249605281771574935
+    second: OneWin_19
+  - first:
+      213: 4060935605115089580
+    second: OneWin_20
+  - first:
+      213: 7059075449598591808
+    second: OneWin_21
+  - first:
+      213: -818010654563787760
+    second: OneWin_22
+  - first:
+      213: -2823215637503921385
+    second: OneWin_23
+  - first:
+      213: 3190130973154948184
+    second: OneWin_24
+  - first:
+      213: 6777367214120301000
+    second: OneWin_25
+  - first:
+      213: -5238053844250250401
+    second: OneWin_26
+  - first:
+      213: 8208606964541862180
+    second: OneWin_27
+  - first:
+      213: -7066063111635630828
+    second: OneWin_28
+  - first:
+      213: -7043495354526124454
+    second: OneWin_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OneWin_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1179
+        width: 218
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83f6869ffe068390800000000000000
+      internalID: -7816543612350041203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1194
+        width: 217
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c410abf9bc80fd0800000000000000
+      internalID: -2375424916557050819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_2
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1214
+        width: 266
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ca3416b5695afa0800000000000000
+      internalID: -5790056426696889339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_3
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 1219
+        width: 186
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5216c2c3440cc0e0800000000000000
+      internalID: -2248417424887639460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_4
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1228
+        width: 190
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df40814fd22ec260800000000000000
+      internalID: 7119666403191312338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_5
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1218
+        width: 194
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e75aedbd2748500800000000000000
+      internalID: 397568955774238321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_6
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 1227
+        width: 199
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3896ffca4f7ab30a0800000000000000
+      internalID: -6900737334698874493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_7
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 1229
+        width: 194
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd6c32ecc3e28710800000000000000
+      internalID: 1694166878953172479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_8
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1216
+        width: 196
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e1d24fb8a5f19a0800000000000000
+      internalID: -6260185399878148461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_9
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1021
+        width: 39
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c8b38943b39a9ea0800000000000000
+      internalID: -5865213166454851384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_10
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1003
+        width: 174
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 798bd5afe74642cd0800000000000000
+      internalID: -2583829789674719081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_11
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 769
+        width: 45
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7df922c7878a8e0800000000000000
+      internalID: -1681961986270701579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_12
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 580
+        width: 247
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceed670449ddd20a0800000000000000
+      internalID: -6904619024882671892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_13
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 608
+        width: 54
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19534c0577cf02b20800000000000000
+      internalID: 3107761332271986065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_14
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 602
+        width: 191
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7e28f664dcc2e90800000000000000
+      internalID: -7049033614339414029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_15
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 632
+        width: 243
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db34474d66b617e0800000000000000
+      internalID: -1795046820997219373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_16
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 620
+        width: 198
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a54e0c945806740800000000000000
+      internalID: 5143257326272403987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_17
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 606
+        width: 199
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fdbe3bc2c4dcf20800000000000000
+      internalID: 3444493044889149337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_18
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 633
+        width: 61
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14a6b1fc44d3f9e0800000000000000
+      internalID: -1588692816593771492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_19
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 615
+        width: 243
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7965e25ab4c7c7270800000000000000
+      internalID: 8249605281771574935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_20
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 618
+        width: 182
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2fe96ca675b5830800000000000000
+      internalID: 4060935605115089580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_21
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 631
+        width: 149
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043410888bfd6f160800000000000000
+      internalID: 7059075449598591808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_22
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 135
+        width: 216
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c9d38c4a7d5a4f0800000000000000
+      internalID: -818010654563787760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_23
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 131
+        width: 244
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7133042f55ce1d8d0800000000000000
+      internalID: -2823215637503921385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_24
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 150
+        width: 498
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8543fd1d73f954c20800000000000000
+      internalID: 3190130973154948184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_25
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 157
+        width: 242
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1f40eb29b0e0e50800000000000000
+      internalID: 6777367214120301000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_26
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 138
+        width: 233
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f533813f7c1be47b0800000000000000
+      internalID: -5238053844250250401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_27
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 153
+        width: 231
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421b05e0b84dae170800000000000000
+      internalID: 8208606964541862180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_28
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 186
+        width: 252
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415877e990d40fd90800000000000000
+      internalID: -7066063111635630828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OneWin_29
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 35
+        width: 134
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a563b580b4a704e90800000000000000
+      internalID: -7043495354526124454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      OneWin_0: -7816543612350041203
+      OneWin_1: -2375424916557050819
+      OneWin_10: -2583829789674719081
+      OneWin_11: -1681961986270701579
+      OneWin_12: -6904619024882671892
+      OneWin_13: 3107761332271986065
+      OneWin_14: -7049033614339414029
+      OneWin_15: -1795046820997219373
+      OneWin_16: 5143257326272403987
+      OneWin_17: 3444493044889149337
+      OneWin_18: -1588692816593771492
+      OneWin_19: 8249605281771574935
+      OneWin_2: -5790056426696889339
+      OneWin_20: 4060935605115089580
+      OneWin_21: 7059075449598591808
+      OneWin_22: -818010654563787760
+      OneWin_23: -2823215637503921385
+      OneWin_24: 3190130973154948184
+      OneWin_25: 6777367214120301000
+      OneWin_26: -5238053844250250401
+      OneWin_27: 8208606964541862180
+      OneWin_28: -7066063111635630828
+      OneWin_29: -7043495354526124454
+      OneWin_3: -2248417424887639460
+      OneWin_4: 7119666403191312338
+      OneWin_5: 397568955774238321
+      OneWin_6: -6900737334698874493
+      OneWin_7: 1694166878953172479
+      OneWin_8: -6260185399878148461
+      OneWin_9: -5865213166454851384
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

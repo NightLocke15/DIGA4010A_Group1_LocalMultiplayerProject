@@ -9,7 +9,8 @@ public class PlayerManagerScript : MonoBehaviour
     [SerializeField] private GameObject playerTwo;
     private bool start;
 
-    [SerializeField] private TextMeshProUGUI waitingRoomText;
+    [SerializeField] private GameObject joinText;
+    [SerializeField] private GameObject startText;
 
     private void Awake()
     {
@@ -31,14 +32,16 @@ public class PlayerManagerScript : MonoBehaviour
 
         if (playerOne == null || playerTwo == null)
         {
-            waitingRoomText.text = "Press A to Join";
+            joinText.SetActive(true);
+            startText.SetActive(false);
             SetPlayers();
         }
         else
         {
             if (SceneManager.GetActiveScene().name == "WaitingRoom")
             {
-                waitingRoomText.text = "Hold Right Trigger to start game";
+                joinText.SetActive(false);
+                startText.SetActive(true);
             }
             
 

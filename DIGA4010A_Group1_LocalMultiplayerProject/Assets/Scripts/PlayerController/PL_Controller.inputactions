@@ -6,7 +6,7 @@
             "id": "804b2aee-23ba-4872-bf50-d50a89750742",
             "actions": [
                 {
-                    "name": "Movement",
+                    "name": "Left",
                     "type": "Value",
                     "id": "6dd86962-3e36-41ae-80b0-3efbaec41050",
                     "expectedControlType": "Vector2",
@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Boost",
+                    "name": "Right",
                     "type": "Value",
                     "id": "8c65a6fe-b4dc-47b6-9503-19ababdfcac8",
                     "expectedControlType": "Vector2",
@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ActivateAbility",
+                    "type": "Button",
+                    "id": "e33d104b-002f-4d6a-a89f-41adfd0be119",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -41,7 +50,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller",
-                    "action": "Movement",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -52,7 +61,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Joystick",
-                    "action": "Movement",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -63,7 +72,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Left",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -74,7 +83,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Movement",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -85,7 +94,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Movement",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -96,7 +105,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Movement",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -107,7 +116,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Movement",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -118,7 +127,7 @@
                     "interactions": "",
                     "processors": "NormalizeVector2",
                     "groups": ";Controller",
-                    "action": "Boost",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -129,7 +138,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Boost",
+                    "action": "Right",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -140,7 +149,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Boost",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -151,7 +160,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Boost",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -162,7 +171,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Boost",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -173,7 +182,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
-                    "action": "Boost",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -185,6 +194,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "StartGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3563dffd-1462-44f5-a5b9-257f5d0edbb6",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f7fa61ea-220f-4e76-bdd1-e972f493238d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard+Mouse",
+                    "action": "ActivateAbility",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8fadaac3-14fe-41ca-9653-e6d0931c1f43",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Controller",
+                    "action": "ActivateAbility",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

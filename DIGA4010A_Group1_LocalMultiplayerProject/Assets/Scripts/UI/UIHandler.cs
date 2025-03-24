@@ -8,7 +8,7 @@ public class UIHandler : MonoBehaviour
     private GameObject howToPlayPanel;
     private GameObject creditsPanel;
 
-    //https://www.youtube.com/watch?v=Hn804Wgr3KE <-- reference for button select stuff
+    // <-- reference for button select stuff
 
     [SerializeField] private Button playButton;
     [SerializeField] private Button backCButton;
@@ -16,15 +16,19 @@ public class UIHandler : MonoBehaviour
 
     private void Start()
     {
-        //Finding all the menu Panels
-        menuPanel = GameObject.Find("Menu");
-        howToPlayPanel = GameObject.Find("HowToPlay");
-        creditsPanel = GameObject.Find("Credits");
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            //Finding all the menu Panels
+            menuPanel = GameObject.Find("Menu");
+            howToPlayPanel = GameObject.Find("HowToPlay");
+            creditsPanel = GameObject.Find("Credits");
 
-        //Setiing up the menu for when the game starts
-        menuPanel.SetActive(true);
-        howToPlayPanel.SetActive(false);
-        creditsPanel.SetActive(false);
+            //Setiing up the menu for when the game starts
+            menuPanel.SetActive(true);
+            howToPlayPanel.SetActive(false);
+            creditsPanel.SetActive(false);
+        }
+        
     }
 
     public void PlayGame() //Playing the game
@@ -38,6 +42,13 @@ public class UIHandler : MonoBehaviour
         menuPanel.SetActive(false);
         howToPlayPanel.SetActive(true);
 
+        /*
+        Title: Controller and Keyboard Menu Navigation w/ Input System - Unity Tutorial
+        Author: samyam
+        Date: 20 Mar 2021
+        Availability: https://www.youtube.com/watch?v=Hn804Wgr3KE
+        Usage: How to get the right button to select at the right time  to set up controllers to move through UI
+        */
         backHButton.Select();
     }
 
@@ -58,6 +69,16 @@ public class UIHandler : MonoBehaviour
         menuPanel.SetActive(true);
 
         playButton.Select();
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0); //Takes players back to menu
+    }
+
+    public void Replay()
+    {
+        SceneManager.LoadScene(1); //Takes players back to waiting room
     }
 
     /*public void Stages() //The players can choose game mode they would like to play on this game.

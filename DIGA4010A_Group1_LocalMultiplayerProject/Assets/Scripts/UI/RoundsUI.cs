@@ -27,13 +27,13 @@ public class RoundsUI : MonoBehaviour
         if (playerOneScore == true)
         {
             playerOneWins += 1;
-            RoundWon(new Color32(253, 0, 62, 255));
+            RoundWon(new Color32(254,134,0,255));
             playerOneScore = false;
         }
         else if (playerTwoScore == true)
         {
             playerTwoWins += 1;
-            RoundWon(new Color32(9, 253, 0, 255));
+            RoundWon(new Color32(0,89,255,255));
             playerTwoScore = false;
         }
     }
@@ -41,18 +41,38 @@ public class RoundsUI : MonoBehaviour
     //Changes the colour of the circle when a player has won
     private void RoundWon(Color32 colour)
     {
-        for (int i = 0; i < rounds.Count; i++)
+        if (playerOneScore == true)
         {
-            if(!rounds[i].isOn)
+            if (!rounds[0].isOn)
             {
-                rounds[i].GetComponentInChildren<Image>().color = colour;
-                rounds[i].isOn = enabled;
+                rounds[0].GetComponentInChildren<Image>().color = colour;
+                rounds[0].isOn = enabled;
 
                 return;
             }
             else
             {
+                rounds[1].GetComponentInChildren<Image>().color = colour;
+                rounds[1].isOn = enabled;
 
+                return;
+            }
+        }
+        else if (playerTwoScore == true)
+        {
+            if (!rounds[2].isOn)
+            {
+                rounds[2].GetComponentInChildren<Image>().color = colour;
+                rounds[2].isOn = enabled;
+
+                return;
+            }
+            else
+            {
+                rounds[1].GetComponentInChildren<Image>().color = colour;
+                rounds[1].isOn = enabled;
+
+                return;
             }
         }
     }

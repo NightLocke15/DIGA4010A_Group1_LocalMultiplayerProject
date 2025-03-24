@@ -20,7 +20,7 @@ public class PlayerCon_Script : MonoBehaviour
    private Rigidbody2D hammerHeadRb;
    [SerializeField] private Rigidbody2D playerBodyRb;
    // [SerializeField] private float moveSpeedx, defaultx, moveSpeedy, defaulty, speedAdjuster;
-   [SerializeField] private float moveSpeed = 5f;
+   public float moveSpeed = 5f;
    [SerializeField] private HammerCollider hammerColScript;
 
    [SerializeField] private float gravity = 9.81f;
@@ -32,6 +32,8 @@ public class PlayerCon_Script : MonoBehaviour
 
    [SerializeField]
    private Vector2 prevPos, currentPos;
+   
+   [SerializeField] private ActivateAbility activateAbility;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -100,11 +102,11 @@ public class PlayerCon_Script : MonoBehaviour
         Vector2 initialPos = new Vector2(anchorPos.x+ AdjustIP.x, anchorPos.y + AdjustIP.y);
         Vector2 direction = new Vector2(directionLeft.x + directionRight.x, directionLeft.y + directionRight.y); 
         Vector2 Movement = (new Vector2(direction.x * moveSpeed, direction.y * moveSpeed)*Time.deltaTime) * inverseDirection;
-        float speed = 0;
-        speed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
+        currentSpeed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
         float Result = 0;
-        Result = speed;
-        //Debug.Log(Result);
+        Result = currentSpeed;
+        Debug.Log(Result);
+        
         
       //  Debug.Log(Xspeed + Yspeed);
         
@@ -242,5 +244,15 @@ public class PlayerCon_Script : MonoBehaviour
         //    moveSpeedx = defaultx;
         //    moveSpeedy = defaulty;
         // }
+    }
+
+    public void ActivateAbility(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Bombed");
+            activateAbility.ActivateBomb();
+            
+        }
     }
 }

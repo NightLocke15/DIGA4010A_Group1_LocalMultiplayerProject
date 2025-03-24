@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 5e9dbc3c3537b4a4889368cd83252dac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4098931269277301138
+    second: HoldRightTrigger_0
+  - first:
+      213: 2496398865210457889
+    second: HoldRightTrigger_1
+  - first:
+      213: 450372940770264725
+    second: HoldRightTrigger_2
+  - first:
+      213: 59067928686659129
+    second: HoldRightTrigger_3
+  - first:
+      213: 8669609199149079845
+    second: HoldRightTrigger_4
+  - first:
+      213: 4963137842070551310
+    second: HoldRightTrigger_5
+  - first:
+      213: 2693879867351044781
+    second: HoldRightTrigger_6
+  - first:
+      213: 8349232172194163376
+    second: HoldRightTrigger_7
+  - first:
+      213: -4012041776939319565
+    second: HoldRightTrigger_8
+  - first:
+      213: 4998801367938423834
+    second: HoldRightTrigger_9
+  - first:
+      213: -3814418417763326638
+    second: HoldRightTrigger_10
+  - first:
+      213: -4475538002516049829
+    second: HoldRightTrigger_11
+  - first:
+      213: 8183387176759592594
+    second: HoldRightTrigger_12
+  - first:
+      213: 3495618810651632228
+    second: HoldRightTrigger_13
+  - first:
+      213: -9003304085778273472
+    second: HoldRightTrigger_14
+  - first:
+      213: 4738521726681277883
+    second: HoldRightTrigger_15
+  - first:
+      213: 5618431085357886993
+    second: HoldRightTrigger_16
+  - first:
+      213: 5981967590809945780
+    second: HoldRightTrigger_17
+  - first:
+      213: 6203306552651993408
+    second: HoldRightTrigger_18
+  - first:
+      213: -4428267645715941316
+    second: HoldRightTrigger_19
+  - first:
+      213: 770761300729975552
+    second: HoldRightTrigger_20
+  - first:
+      213: 2076955920818401952
+    second: HoldRightTrigger_21
+  - first:
+      213: -574600642538323906
+    second: HoldRightTrigger_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HoldRightTrigger_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 306
+        width: 155
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299b308b54452e830800000000000000
+      internalID: 4098931269277301138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 299
+        width: 124
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12fbe8a9a8df4a220800000000000000
+      internalID: 2496398865210457889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_2
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 299
+        width: 128
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5964f0fadcb004600800000000000000
+      internalID: 450372940770264725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_3
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 307
+        width: 135
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9368cfad7f9d1d000800000000000000
+      internalID: 59067928686659129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_4
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 301
+        width: 139
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d5db012a3a05870800000000000000
+      internalID: 8669609199149079845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_5
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 306
+        width: 32
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0bf9ef429b90e440800000000000000
+      internalID: 4963137842070551310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_6
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 300
+        width: 126
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da219017775926520800000000000000
+      internalID: 2693879867351044781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 296
+        width: 172
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba65eaac6e6ed370800000000000000
+      internalID: 8349232172194163376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_8
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 311
+        width: 128
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe3185b24d5258c0800000000000000
+      internalID: -4012041776939319565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_9
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 315
+        width: 140
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1cd4befb5f4f5540800000000000000
+      internalID: 4998801367938423834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_10
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 308
+        width: 125
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2556280a8a6701bc0800000000000000
+      internalID: -3814418417763326638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_11
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 309
+        width: 32
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50054d26e1b3e1c0800000000000000
+      internalID: -4475538002516049829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_12
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 302
+        width: 126
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2960e32a74b319170800000000000000
+      internalID: 8183387176759592594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_13
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 304
+        width: 127
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4626017a9cee28030800000000000000
+      internalID: 3495618810651632228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_14
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 302
+        width: 113
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bec52b2a6dd0380800000000000000
+      internalID: -9003304085778273472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_15
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 298
+        width: 117
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5ee47976c92c140800000000000000
+      internalID: 4738521726681277883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_16
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 34
+        width: 142
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ee4cded4da8fd40800000000000000
+      internalID: 5618431085357886993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_17
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 18
+        width: 146
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6402c74d7340350800000000000000
+      internalID: 5981967590809945780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_18
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 25
+        width: 163
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041dcaf6172961650800000000000000
+      internalID: 6203306552651993408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_19
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 38
+        width: 145
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38feb6c902ab82c0800000000000000
+      internalID: -4428267645715941316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_20
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 35
+        width: 154
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003d0a0c15b42ba00800000000000000
+      internalID: 770761300729975552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_21
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 29
+        width: 134
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a27682e764d2dc10800000000000000
+      internalID: 2076955920818401952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HoldRightTrigger_22
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 30
+        width: 117
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30cacd82cb9608f0800000000000000
+      internalID: -574600642538323906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HoldRightTrigger_0: 4098931269277301138
+      HoldRightTrigger_1: 2496398865210457889
+      HoldRightTrigger_10: -3814418417763326638
+      HoldRightTrigger_11: -4475538002516049829
+      HoldRightTrigger_12: 8183387176759592594
+      HoldRightTrigger_13: 3495618810651632228
+      HoldRightTrigger_14: -9003304085778273472
+      HoldRightTrigger_15: 4738521726681277883
+      HoldRightTrigger_16: 5618431085357886993
+      HoldRightTrigger_17: 5981967590809945780
+      HoldRightTrigger_18: 6203306552651993408
+      HoldRightTrigger_19: -4428267645715941316
+      HoldRightTrigger_2: 450372940770264725
+      HoldRightTrigger_20: 770761300729975552
+      HoldRightTrigger_21: 2076955920818401952
+      HoldRightTrigger_22: -574600642538323906
+      HoldRightTrigger_3: 59067928686659129
+      HoldRightTrigger_4: 8669609199149079845
+      HoldRightTrigger_5: 4963137842070551310
+      HoldRightTrigger_6: 2693879867351044781
+      HoldRightTrigger_7: 8349232172194163376
+      HoldRightTrigger_8: -4012041776939319565
+      HoldRightTrigger_9: 4998801367938423834
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

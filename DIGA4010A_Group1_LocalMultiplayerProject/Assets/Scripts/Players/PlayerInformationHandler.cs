@@ -5,33 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerInformationHandler : MonoBehaviour
 {
-    /* 1.
-        Title:
-        Author:
-        Date:
-        Code Version:
-        Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
-        Usage: How to add health bars to the players
-     */
-
-    /* 2.
-        Title:
-        Author:
-        Date:
-        Code Version:
-        Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
-        Usage: How to change the name of an object in code
-     */
-
-    /* 3.
-        Title:
-        Author:
-        Date:
-        Code Version:
-        Availability: https://www.youtube.com/watch?v=1CXVbCbqKyg
-        Usage: adding dust particles when sliding
-     */
-
     #region Upgrades
     //Passive
     public bool freezeOnCrit;
@@ -44,6 +17,23 @@ public class PlayerInformationHandler : MonoBehaviour
     public bool dash;
     public bool shield;
     public bool chuckBomb;
+    #endregion
+
+    #region Character Sprites
+    [SerializeField] private SpriteRenderer body;
+    [SerializeField] private SpriteRenderer leftArm;
+    [SerializeField] private SpriteRenderer rightArm;
+    [SerializeField] private SpriteRenderer pot;
+
+    [SerializeField] private Sprite deltonBody;
+    [SerializeField] private Sprite deltonLeftArm;
+    [SerializeField] private Sprite deltonRightArm;
+    [SerializeField] private Sprite deltonPot;
+
+    [SerializeField] private Sprite gaspionBody;
+    [SerializeField] private Sprite gaspionLeftArm;
+    [SerializeField] private Sprite gaspionRightArm;
+    [SerializeField] private Sprite gaspionPot;
     #endregion
 
     public Slider playerHealth;
@@ -60,6 +50,10 @@ public class PlayerInformationHandler : MonoBehaviour
     [SerializeField] private TrailRenderer weaponTrail;
     public bool input;
 
+    [SerializeField] private ActivateAbility activateAbility;
+
+
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -67,25 +61,63 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void Start()
     {
+        /*
+        Title: How to Add Health Bar to Players in Unity!
+        Author: Kory Code
+        Date: 10 Jun 2022
+        Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
+        Usage: How to add health bars to the players
+        */
+
+        //Accessing the health slider on the player
+        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>();
+        playerHealth.value = playerHealth.maxValue;
+
+        /*
+        Title: Change Game Object’s name when in runtime
+        Author: Marrrk
+        Date: May 2011
+        Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
+        Usage: How to change the name of an object in code
+        */
         //Change the name of the prefab to the relevant player name (one or two) when the prefabs are instantiated in.
         if (GameObject.Find("PlayerObjectOne") == null)
         {
-            this.gameObject.name = "PlayerObjectOne"; //2 in references
-            this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            this.gameObject.name = "PlayerObjectOne"; 
+            this.transform.GetChild(0).gameObject.layer = 6;
+            this.transform.GetChild(1).gameObject.layer = 3;
+            //this.transform.GetChild(1).GetComponent<BoxCollider2D>().includeLayers = 0;
+            body.sprite = deltonBody;
+            leftArm.sprite = deltonLeftArm;
+            rightArm.sprite = deltonRightArm;
+            pot.sprite = deltonPot;
+            
             this.gameObject.transform.position = new Vector3(-18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+            playerHealth.transform.GetChild(1).GetChild(0).gameObject.GetComponent<Image>().color = new Color32(254, 134, 0, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().startColor = new Color32(254, 134, 0, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().endColor = new Color32(254, 134, 0, 255);
         }
         else
         {
             this.gameObject.name = "PlayerObjectTwo";
-            this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+            this.transform.GetChild(0).gameObject.layer = 9;
+            this.transform.GetChild(1).gameObject.layer = 8;
+            //this.transform.GetChild(1).GetComponent<BoxCollider2D>().includeLayers = 3 | 6;
+            body.sprite = gaspionBody;
+            leftArm.sprite = gaspionLeftArm;
+            rightArm.sprite = gaspionRightArm;
+            pot.sprite = gaspionPot;
+            
             this.gameObject.transform.position = new Vector3(18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+            playerHealth.transform.GetChild(1).GetChild(0).gameObject.GetComponent<Image>().color = new Color32(0, 89, 255, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().startColor = new Color32(0, 89, 255, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().endColor = new Color32(0, 89, 255, 255);
         }
 
-        //Accessing the health slider on the player
-        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>(); //1. in references
-        playerHealth.value = 100;
-
         dustParticles.Pause();
+
+        activateAbility = this.transform.GetChild(0).GetComponent<ActivateAbility>();
+        activateAbility.enabled = false;
 
     }
 
@@ -116,9 +148,13 @@ public class PlayerInformationHandler : MonoBehaviour
             playerHealth.value += 1;
         }
 
-        //FreezeEffect();
-
-        //3. reference
+        /* 
+        Title: Dust Effect when Running & Jumping in Unity [Particle Effect]
+        Author: Press Start
+        Date: 1 Sept 2019
+        Availability: https://www.youtube.com/watch?v=1CXVbCbqKyg
+        Usage: adding dust particles when sliding
+        */
         //Checking if the player is grounded
         if (this.gameObject.transform.GetChild(0).GetComponent<GroundCheck>().grounded == true)
         {
@@ -157,6 +193,26 @@ public class PlayerInformationHandler : MonoBehaviour
         else
         {
             weaponTrail.emitting = false;
+        }
+
+        if (higherKnockback == true)
+        {
+            HigherKnockBack();
+        }
+
+        if (fasterMovingWeapon == true)
+        {
+            FasterMovingWeapon();
+        }
+
+        if (higherHealth == true)
+        {
+            HigherHealth();
+        }
+
+        if (chuckBomb == true)
+        {
+            ChuckBomb();
         }
     }
 
@@ -197,17 +253,20 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void HigherKnockBack()
     {
-
+        Knockback knockBackSpeed = this.gameObject.transform.GetChild(1).GetComponent<Knockback>();
+        knockBackSpeed.knockBackSpeed = 15;
     }
 
     private void HigherHealth()
-    { 
-
+    {
+        playerHealth.maxValue = 120;
+        playerHealth.value = playerHealth.maxValue;
     }
 
     private void FasterMovingWeapon()
     {
-
+        PlayerCon_Script playerCon = this.gameObject.transform.GetChild(0).GetComponent<PlayerCon_Script>();
+        playerCon.moveSpeed = 7;
     }
 
     //Active
@@ -228,6 +287,6 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void ChuckBomb()
     {
-
+        activateAbility.enabled = true;
     }
 }
