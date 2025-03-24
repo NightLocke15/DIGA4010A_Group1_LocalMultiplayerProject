@@ -61,7 +61,7 @@ public class UIHandler : MonoBehaviour
         /*
         Title: Controller and Keyboard Menu Navigation w/ Input System - Unity Tutorial
         Author: samyam
-        Date: 20 Mar 2021
+        Date: 12 March 2025
         Availability: https://www.youtube.com/watch?v=Hn804Wgr3KE
         Usage: How to get the right button to select at the right time  to set up controllers to move through UI
         */
@@ -77,7 +77,7 @@ public class UIHandler : MonoBehaviour
         /*
         Title: Controller and Keyboard Menu Navigation w/ Input System - Unity Tutorial
         Author: samyam
-        Date: 20 Mar 2021
+        Date: 12 March 2025
         Availability: https://www.youtube.com/watch?v=Hn804Wgr3KE
         Usage: How to get the right button to select at the right time  to set up controllers to move through UI
         */
@@ -94,7 +94,7 @@ public class UIHandler : MonoBehaviour
         /*
         Title: Controller and Keyboard Menu Navigation w/ Input System - Unity Tutorial
         Author: samyam
-        Date: 20 Mar 2021
+        Date: 12 March 2025
         Availability: https://www.youtube.com/watch?v=Hn804Wgr3KE
         Usage: How to get the right button to select at the right time  to set up controllers to move through UI
         */

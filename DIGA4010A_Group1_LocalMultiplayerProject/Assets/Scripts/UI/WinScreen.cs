@@ -37,7 +37,7 @@ public class WinScreen : MonoBehaviour
             /*
            Title: How can multiple users control a single UI canvas using InputSystem?
            Author: AlbertoVgdd
-           Date: May 2021
+           Date: 14 March 2025
            Availability: https://discussions.unity.com/t/how-can-multiple-users-control-a-single-ui-canvas-using-inputsystem/245974
            Usage: Helped me figure out how to get one user only to use a certain part of the UI (Used this in else if as well)
            */
@@ -63,7 +63,7 @@ public class WinScreen : MonoBehaviour
             /*
            Title: How can multiple users control a single UI canvas using InputSystem?
            Author: AlbertoVgdd
-           Date: May 2021
+           Date: 14 March 2025
            Availability: https://discussions.unity.com/t/how-can-multiple-users-control-a-single-ui-canvas-using-inputsystem/245974
            Usage: Helped me figure out how to get one user only to use a certain part of the UI (Used this in else if as well)
            */

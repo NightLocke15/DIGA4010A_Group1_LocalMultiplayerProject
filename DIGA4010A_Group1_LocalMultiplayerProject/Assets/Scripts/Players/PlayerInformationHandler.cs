@@ -54,7 +54,7 @@ public class PlayerInformationHandler : MonoBehaviour
     [SerializeField] private ParticleSystem dustParticles;
     [SerializeField] private TrailRenderer weaponTrail;
     public bool input;
-    [SerializeField] private Audio_Manager_Player audio_Manager_Player;
+    //[SerializeField] private Audio_Manager_Player audio_Manager_Player;
 
     [SerializeField] private ActivateAbility activateAbility;
 
@@ -70,7 +70,7 @@ public class PlayerInformationHandler : MonoBehaviour
         /*
         Title: How to Add Health Bar to Players in Unity!
         Author: Kory Code
-        Date: 10 Jun 2022
+        Date: 13 March 2025
         Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
         Usage: How to add health bars to the players
         */
@@ -82,7 +82,7 @@ public class PlayerInformationHandler : MonoBehaviour
         /*
         Title: Change Game Object�s name when in runtime
         Author: Marrrk
-        Date: May 2011
+        Date: 12 March 2025
         Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
         Usage: How to change the name of an object in code
         */
@@ -167,7 +167,7 @@ public class PlayerInformationHandler : MonoBehaviour
         /* 
         Title: Dust Effect when Running & Jumping in Unity [Particle Effect]
         Author: Press Start
-        Date: 1 Sept 2019
+        Date: 16 March 2025
         Availability: https://www.youtube.com/watch?v=1CXVbCbqKyg
         Usage: adding dust particles when sliding
         */
