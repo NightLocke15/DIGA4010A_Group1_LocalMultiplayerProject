@@ -11,6 +11,8 @@ public class BombBehaviour : MonoBehaviour
    [SerializeField] private float speed;
 
    private Vector2 currentPos, prevPos;
+
+   [SerializeField] private Audio_Bomb audioBomb;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,6 +76,11 @@ public class BombBehaviour : MonoBehaviour
             {
                 BombGoesBoom();
             }
+
+            else
+            {
+                audioBomb.TingSound();
+            }
         }
         
        
@@ -81,7 +88,7 @@ public class BombBehaviour : MonoBehaviour
 
     private void BombGoesBoom()
     {
-        
+        audioBomb.ExplodeSound();
         Destroy(gameObject);
     }
 }

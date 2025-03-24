@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 2579221631546668040}
   - component: {fileID: 9216642129709545862}
   - component: {fileID: 977656060407239124}
+  - component: {fileID: 1939196517340103624}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -207,3 +208,30 @@ MonoBehaviour:
   StartTime: 0
   activateAbility: {fileID: 0}
   speed: 0
+  audioBomb: {fileID: 1939196517340103624}
+--- !u!114 &1939196517340103624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6984659141054112291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4611ddbdc1ae6a148b74d9ad07dd42c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombExplosion:
+    Guid:
+      Data1: -1693829351
+      Data2: 1210590974
+      Data3: -83185514
+      Data4: -365375262
+    Path: event:/Explosion
+  bombTing:
+    Guid:
+      Data1: 84681996
+      Data2: 1136253993
+      Data3: -1503443294
+      Data4: -1171047322
+    Path: event:/Bomb-Tings
