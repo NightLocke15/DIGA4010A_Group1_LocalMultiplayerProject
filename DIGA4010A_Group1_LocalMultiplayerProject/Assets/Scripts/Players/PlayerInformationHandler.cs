@@ -54,6 +54,7 @@ public class PlayerInformationHandler : MonoBehaviour
     [SerializeField] private ParticleSystem dustParticles;
     [SerializeField] private TrailRenderer weaponTrail;
     public bool input;
+    [SerializeField] private Audio_Manager_Player audio_Manager_Player;
 
     [SerializeField] private ActivateAbility activateAbility;
 
@@ -79,7 +80,7 @@ public class PlayerInformationHandler : MonoBehaviour
         playerHealth.value = playerHealth.maxValue;
 
         /*
-        Title: Change Game Object’s name when in runtime
+        Title: Change Game Objectï¿½s name when in runtime
         Author: Marrrk
         Date: May 2011
         Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
@@ -300,6 +301,6 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void ChuckBomb()
     {
-        
+
     }
 }

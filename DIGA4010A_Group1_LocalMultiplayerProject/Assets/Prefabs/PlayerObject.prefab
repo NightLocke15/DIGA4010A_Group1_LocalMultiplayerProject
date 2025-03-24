@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 3072261525240535213}
   - component: {fileID: 96818520706597163}
   - component: {fileID: 1408358034398507974}
+  - component: {fileID: 4993487938878832791}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -545,7 +546,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 6dd86962-3e36-41ae-80b0-3efbaec41050
-    m_ActionName: 'PlayerController/Movement[/Mouse/delta/up,/Mouse/delta/down,/Mouse/delta/left,/Mouse/delta/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+    m_ActionName: PlayerController/Movement[/Mouse/delta/up,/Mouse/delta/down,/Mouse/delta/left,/Mouse/delta/right,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5716477992334461125}
@@ -561,7 +562,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 8c65a6fe-b4dc-47b6-9503-19ababdfcac8
-    m_ActionName: 'PlayerController/Boost[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+    m_ActionName: PlayerController/Boost[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6124401001734458924}
@@ -577,15 +578,15 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: a20aa9f1-0353-46b8-b7bb-d65f26fc2e15
-    m_ActionName: 'PlayerController/StartGame[/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger]'
+    m_ActionName: PlayerController/StartGame[/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 5bd01151-d02e-4378-aee8-47c2fb9acd72
-    m_ActionName: 'Menu/Navigation[/XInputControllerWindows/leftStick/up,/XInputControllerWindows1/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows1/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows1/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows1/leftStick/right]'
+    m_ActionName: Menu/Navigation[/XInputControllerWindows/leftStick/up,/XInputControllerWindows1/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows1/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows1/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows1/leftStick/right]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: a10ce4d7-5142-4906-a7a9-3e79562955fa
-    m_ActionName: 'Menu/Select[/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]'
+    m_ActionName: Menu/Select[/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5716477992334461125}
@@ -601,7 +602,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: e33d104b-002f-4d6a-a89f-41adfd0be119
-    m_ActionName: 'PlayerController/ActivateAbility[/Keyboard/e]'
+    m_ActionName: PlayerController/ActivateAbility[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
@@ -709,6 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 0
+  audio_Manager_Player: {fileID: 4993487938878832791}
 --- !u!114 &96818520706597163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,6 +741,47 @@ MonoBehaviour:
   forceY: 10
   Check: {fileID: 0}
   rb: {fileID: 8852404898414201316}
+  audio_Player: {fileID: 4993487938878832791}
+--- !u!114 &4993487938878832791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862228161328596440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7a5650344e28f4098c55aa28b7d083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  landingSound:
+    Guid:
+      Data1: -1220449725
+      Data2: 1113272755
+      Data3: 974887598
+      Data4: -311394568
+    Path: event:/Landing
+  hitSoundGorilla:
+    Guid:
+      Data1: 1295628364
+      Data2: 1151531442
+      Data3: 2030980271
+      Data4: -565321414
+    Path: event:/Gorila
+  hitSoundDog:
+    Guid:
+      Data1: -178380788
+      Data2: 1253140687
+      Data3: 2040315042
+      Data4: 630987324
+    Path: event:/Dog
+  slideSound:
+    Guid:
+      Data1: -646914316
+      Data2: 1094575453
+      Data3: -1613468512
+      Data4: 552396644
+    Path: event:/Slide
 --- !u!1 &1917994607688353054
 GameObject:
   m_ObjectHideFlags: 0
@@ -6315,6 +6358,7 @@ MonoBehaviour:
   dustParticles: {fileID: 2547611091600609172}
   weaponTrail: {fileID: 1117598271928263560}
   input: 0
+  audio_Manager_Player: {fileID: 4993487938878832791}
   activateAbility: {fileID: 0}
 --- !u!1 &5387569303609898793
 GameObject:

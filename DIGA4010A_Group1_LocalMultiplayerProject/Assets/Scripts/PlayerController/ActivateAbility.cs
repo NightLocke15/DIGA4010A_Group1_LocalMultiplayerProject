@@ -7,6 +7,7 @@ public class ActivateAbility : MonoBehaviour
     [SerializeField] private float forceY;
     [SerializeField] private GameObject Check;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Audio_Manager_Player audio_Player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +36,7 @@ public class ActivateAbility : MonoBehaviour
 
     public void TestKnockback(Transform point, float speed)
     {
+        audio_Player.HitSound();
         Vector2 dir = (transform.position - point.position).normalized;
         rb.AddForce(dir * speed, ForceMode2D.Impulse );
         Debug.Log("knockback");
