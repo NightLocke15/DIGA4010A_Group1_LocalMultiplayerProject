@@ -27,13 +27,13 @@ public class RoundsUI : MonoBehaviour
         if (playerOneScore == true)
         {
             playerOneWins += 1;
-            RoundWon(new Color32(253, 0, 62, 255));
+            RoundWon(new Color32(254,134,0,255));
             playerOneScore = false;
         }
         else if (playerTwoScore == true)
         {
             playerTwoWins += 1;
-            RoundWon(new Color32(9, 253, 0, 255));
+            RoundWon(new Color32(0,89,255,255));
             playerTwoScore = false;
         }
     }

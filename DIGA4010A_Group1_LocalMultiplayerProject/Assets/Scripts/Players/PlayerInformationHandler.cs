@@ -19,6 +19,23 @@ public class PlayerInformationHandler : MonoBehaviour
     public bool chuckBomb;
     #endregion
 
+    #region Character Sprites
+    [SerializeField] private SpriteRenderer body;
+    [SerializeField] private SpriteRenderer leftArm;
+    [SerializeField] private SpriteRenderer rightArm;
+    [SerializeField] private SpriteRenderer pot;
+
+    [SerializeField] private Sprite deltonBody;
+    [SerializeField] private Sprite deltonLeftArm;
+    [SerializeField] private Sprite deltonRightArm;
+    [SerializeField] private Sprite deltonPot;
+
+    [SerializeField] private Sprite gaspionBody;
+    [SerializeField] private Sprite gaspionLeftArm;
+    [SerializeField] private Sprite gaspionRightArm;
+    [SerializeField] private Sprite gaspionPot;
+    #endregion
+
     public Slider playerHealth;
     [SerializeField] private GameObject otherPlayer;
     private float frozenTime;
@@ -33,6 +50,10 @@ public class PlayerInformationHandler : MonoBehaviour
     [SerializeField] private TrailRenderer weaponTrail;
     public bool input;
 
+    [SerializeField] private ActivateAbility activateAbility;
+
+
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -40,6 +61,18 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void Start()
     {
+        /*
+        Title: How to Add Health Bar to Players in Unity!
+        Author: Kory Code
+        Date: 10 Jun 2022
+        Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
+        Usage: How to add health bars to the players
+        */
+
+        //Accessing the health slider on the player
+        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>();
+        playerHealth.value = playerHealth.maxValue;
+
         /*
         Title: Change Game Object’s name when in runtime
         Author: Marrrk
@@ -54,8 +87,15 @@ public class PlayerInformationHandler : MonoBehaviour
             this.transform.GetChild(0).gameObject.layer = 6;
             this.transform.GetChild(1).gameObject.layer = 3;
             //this.transform.GetChild(1).GetComponent<BoxCollider2D>().includeLayers = 0;
-            this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+            body.sprite = deltonBody;
+            leftArm.sprite = deltonLeftArm;
+            rightArm.sprite = deltonRightArm;
+            pot.sprite = deltonPot;
+            
             this.gameObject.transform.position = new Vector3(-18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+            playerHealth.transform.GetChild(1).GetChild(0).gameObject.GetComponent<Image>().color = new Color32(254, 134, 0, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().startColor = new Color32(254, 134, 0, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().endColor = new Color32(254, 134, 0, 255);
         }
         else
         {
@@ -63,23 +103,21 @@ public class PlayerInformationHandler : MonoBehaviour
             this.transform.GetChild(0).gameObject.layer = 9;
             this.transform.GetChild(1).gameObject.layer = 8;
             //this.transform.GetChild(1).GetComponent<BoxCollider2D>().includeLayers = 3 | 6;
-            this.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+            body.sprite = gaspionBody;
+            leftArm.sprite = gaspionLeftArm;
+            rightArm.sprite = gaspionRightArm;
+            pot.sprite = gaspionPot;
+            
             this.gameObject.transform.position = new Vector3(18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
+            playerHealth.transform.GetChild(1).GetChild(0).gameObject.GetComponent<Image>().color = new Color32(0, 89, 255, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().startColor = new Color32(0, 89, 255, 255);
+            this.transform.GetChild(1).GetComponent<TrailRenderer>().endColor = new Color32(0, 89, 255, 255);
         }
 
-        /*
-        Title: How to Add Health Bar to Players in Unity!
-        Author: Kory Code
-        Date: 10 Jun 2022
-        Availability: https://www.youtube.com/watch?v=YJW3TLmckqk
-        Usage: How to add health bars to the players
-        */
-
-        //Accessing the health slider on the player
-        playerHealth = this.gameObject.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<Slider>(); 
-        playerHealth.value = playerHealth.maxValue;
-
         dustParticles.Pause();
+
+        activateAbility = this.transform.GetChild(0).GetComponent<ActivateAbility>();
+        activateAbility.enabled = false;
 
     }
 
@@ -171,6 +209,11 @@ public class PlayerInformationHandler : MonoBehaviour
         {
             HigherHealth();
         }
+
+        if (chuckBomb == true)
+        {
+            ChuckBomb();
+        }
     }
 
     public void StartGame(InputAction.CallbackContext context)
@@ -217,6 +260,7 @@ public class PlayerInformationHandler : MonoBehaviour
     private void HigherHealth()
     {
         playerHealth.maxValue = 120;
+        playerHealth.value = playerHealth.maxValue;
     }
 
     private void FasterMovingWeapon()
@@ -243,6 +287,6 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void ChuckBomb()
     {
-
+        activateAbility.enabled = true;
     }
 }

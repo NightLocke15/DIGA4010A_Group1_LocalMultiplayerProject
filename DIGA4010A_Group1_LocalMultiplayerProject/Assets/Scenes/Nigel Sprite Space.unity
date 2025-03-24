@@ -920,6 +920,8 @@ MonoBehaviour:
   outerRadius: 3
   innerRadius: 0.8
   playerBody: {fileID: 1185307025}
+  directionLeft: {x: 0, y: 0}
+  directionRight: {x: 0, y: 0}
   hammerHeadRb: {fileID: 876655939}
   playerBodyRb: {fileID: 1185307028}
   moveSpeed: 25
@@ -928,10 +930,11 @@ MonoBehaviour:
   HasLeftInput: 0
   HasRightInput: 0
   speedBarrier: 20
-  currentSpeed: 0
   force: 0.5
+  currentSpeed: 0
   prevPos: {x: 0, y: 0}
   currentPos: {x: 0, y: 0}
+  activateAbility: {fileID: 0}
 --- !u!114 &1185307027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,6 +1004,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a10ce4d7-5142-4906-a7a9-3e79562955fa
     m_ActionName: 'Menu/Select[/DualSenseGamepadHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e33d104b-002f-4d6a-a89f-41adfd0be119
+    m_ActionName: 'PlayerController/ActivateAbility[/Keyboard/e,/XInputControllerWindows/leftTrigger,/XInputControllerWindows1/leftTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
