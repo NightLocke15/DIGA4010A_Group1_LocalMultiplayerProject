@@ -96,6 +96,12 @@ public class PlayerCon_Script : MonoBehaviour
 
     private void ApplyMovement(Transform moveThis,Transform AnchorPoint, float inverseDirection)
     {
+        // Title: Clamping a value between two radiuses
+        // Author: theembracedone
+        // Date: 3 March 2025
+        // Code version: 
+        // Availability: https://discussions.unity.com/t/clamping-a-value-between-two-radiuses/249733
+        
         currentPos = playerBody.position;
         Vector2 anchorPos = Vector2.zero;
         Vector2 AdjustIP = new Vector2(moveThis.position.x- AnchorPoint.position.x, moveThis.position.y- AnchorPoint.position.y);
