@@ -32,6 +32,7 @@ public class PlayerInformationHandler : MonoBehaviour
     [SerializeField] private ParticleSystem dustParticles;
     [SerializeField] private TrailRenderer weaponTrail;
     public bool input;
+    [SerializeField] private Audio_Manager_Player audio_Manager_Player;
 
     private void Awake()
     {
@@ -41,7 +42,7 @@ public class PlayerInformationHandler : MonoBehaviour
     private void Start()
     {
         /*
-        Title: Change Game Object’s name when in runtime
+        Title: Change Game Objectï¿½s name when in runtime
         Author: Marrrk
         Date: May 2011
         Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
@@ -127,6 +128,7 @@ public class PlayerInformationHandler : MonoBehaviour
                 var emision = dustParticles.emission;
                 emision.rateOverTime = 150;
                 dustParticles.Play();
+               // audio_Manager_Player.SlideSound();
             }
             else if (this.gameObject.transform.GetChild(0).GetComponent<Rigidbody2D>().linearVelocityX < -5)
             {
@@ -134,6 +136,7 @@ public class PlayerInformationHandler : MonoBehaviour
                 var emision = dustParticles.emission;
                 emision.rateOverTime = 150;
                 dustParticles.Play();
+                //audio_Manager_Player.SlideSound();
             }
             else
             {

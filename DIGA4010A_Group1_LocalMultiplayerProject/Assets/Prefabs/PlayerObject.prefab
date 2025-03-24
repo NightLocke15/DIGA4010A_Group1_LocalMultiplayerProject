@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 3072261525240535213}
   - component: {fileID: 96818520706597163}
   - component: {fileID: 1408358034398507974}
+  - component: {fileID: 4993487938878832791}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -596,6 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 0
+  audio_Manager_Player: {fileID: 4993487938878832791}
 --- !u!114 &96818520706597163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,6 +628,47 @@ MonoBehaviour:
   forceY: 10
   Check: {fileID: 0}
   rb: {fileID: 8852404898414201316}
+  audio_Player: {fileID: 4993487938878832791}
+--- !u!114 &4993487938878832791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862228161328596440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7a5650344e28f4098c55aa28b7d083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  landingSound:
+    Guid:
+      Data1: -1220449725
+      Data2: 1113272755
+      Data3: 974887598
+      Data4: -311394568
+    Path: event:/Landing
+  hitSoundGorilla:
+    Guid:
+      Data1: 1295628364
+      Data2: 1151531442
+      Data3: 2030980271
+      Data4: -565321414
+    Path: event:/Gorila
+  hitSoundDog:
+    Guid:
+      Data1: -178380788
+      Data2: 1253140687
+      Data3: 2040315042
+      Data4: 630987324
+    Path: event:/Dog
+  slideSound:
+    Guid:
+      Data1: -646914316
+      Data2: 1094575453
+      Data3: -1613468512
+      Data4: 552396644
+    Path: event:/Slide
 --- !u!1 &2399478826667042169
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,6 +5891,7 @@ MonoBehaviour:
   dustParticles: {fileID: 2547611091600609172}
   weaponTrail: {fileID: 1117598271928263560}
   input: 0
+  audio_Manager_Player: {fileID: 4993487938878832791}
 --- !u!1 &5508106052317784508
 GameObject:
   m_ObjectHideFlags: 0
