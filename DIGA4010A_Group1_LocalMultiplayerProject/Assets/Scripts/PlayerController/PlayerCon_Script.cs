@@ -12,7 +12,7 @@ public class PlayerCon_Script : MonoBehaviour
    [SerializeField] private float innerRadius; //the deadzone where the arms can't go at centre of body
 
    [SerializeField] private Transform playerBody;
-   private Vector2 directionLeft, directionRight;
+   public Vector2 directionLeft, directionRight;
    private Vector2 boostDirection;
    private Vector2 finalDirection;
 
@@ -26,8 +26,10 @@ public class PlayerCon_Script : MonoBehaviour
    [SerializeField] private float gravity = 9.81f;
    [FormerlySerializedAs("HasInput")] [SerializeField] private bool HasLeftInput = false, HasRightInput = false;
 
-   [SerializeField] private float speedBarrier, currentSpeed, force;
-   
+   [SerializeField] private float speedBarrier, force;
+
+    public float currentSpeed;
+
    [SerializeField]
    private Vector2 prevPos, currentPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -92,9 +94,9 @@ public class PlayerCon_Script : MonoBehaviour
 
     private void ApplyMovement(Transform moveThis,Transform AnchorPoint, float inverseDirection)
     {
-        currentPos = playerBody.localPosition;
+        currentPos = playerBody.position;
         Vector2 anchorPos = Vector2.zero;
-        Vector2 AdjustIP = new Vector2(moveThis.localPosition.x- AnchorPoint.localPosition.x, moveThis.localPosition.y- AnchorPoint.localPosition.y);
+        Vector2 AdjustIP = new Vector2(moveThis.position.x- AnchorPoint.position.x, moveThis.position.y- AnchorPoint.position.y);
         Vector2 initialPos = new Vector2(anchorPos.x+ AdjustIP.x, anchorPos.y + AdjustIP.y);
         Vector2 direction = new Vector2(directionLeft.x + directionRight.x, directionLeft.y + directionRight.y); 
         Vector2 Movement = (new Vector2(direction.x * moveSpeed, direction.y * moveSpeed)*Time.deltaTime) * inverseDirection;
@@ -102,7 +104,7 @@ public class PlayerCon_Script : MonoBehaviour
         speed = Vector2.Distance(currentPos, prevPos) / Time.deltaTime;
         float Result = 0;
         Result = speed;
-        
+        //Debug.Log(Result);
         
       //  Debug.Log(Xspeed + Yspeed);
         
@@ -114,7 +116,7 @@ public class PlayerCon_Script : MonoBehaviour
             //float mag = Vector2.Distance(allowedPos, anchorPos);
             Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
             Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
-            Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
+            Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.position.x, restrictPos.y+ AnchorPoint.position.y);
         
            // moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
            //hammerHeadRb.linearVelocity = finalPos.normalized * 5;
@@ -129,7 +131,7 @@ public class PlayerCon_Script : MonoBehaviour
                 //float mag = Vector2.Distance(allowedPos, anchorPos);
                 Vector2 mag = new Vector2(allowedPos.x - anchorPos.x, allowedPos.y- anchorPos.y);
                 Vector2 restrictPos = mag.normalized * Mathf.Clamp(mag.magnitude, innerRadius, outerRadius);
-                Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.localPosition.x, restrictPos.y+ AnchorPoint.localPosition.y);
+                Vector2 finalPos = new Vector2(restrictPos.x+ AnchorPoint.position.x, restrictPos.y+ AnchorPoint.position.y);
         
                 //moveThis.localPosition = Vector2.MoveTowards(moveThis.localPosition, finalPos, 1);
                 playerBodyRb.MovePosition(finalPos);
@@ -187,10 +189,12 @@ public class PlayerCon_Script : MonoBehaviour
             directionLeft.x = PlayerInput.x;
             directionLeft.y = PlayerInput.y;
             HasLeftInput = true;
+            this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = true; //Chris addition
         }
         else
         {
             HasLeftInput = false;
+            this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = false; //Chris addition
             directionLeft = Vector2.zero;
         }
     }
@@ -203,10 +207,12 @@ public class PlayerCon_Script : MonoBehaviour
                 directionRight.x = PlayerInput.x;
                 directionRight.y = PlayerInput.y;
                 HasRightInput = true;
+                this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = true; //Chris addition
             }
             else
             {
                 HasRightInput = false;
+                this.gameObject.transform.parent.GetComponent<PlayerInformationHandler>().input = false; //Chris addition
                 directionRight = Vector2.zero;
             }
          //   Vector2 PlayerInput = context.ReadValue<Vector2>();
