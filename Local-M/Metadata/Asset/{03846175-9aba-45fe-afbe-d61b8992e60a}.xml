@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{03846175-9aba-45fe-afbe-d61b8992e60a}">
+		<property name="assetPath">
+			<value>Slide/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{614b51bd-04ce-4fe1-bc30-f58957540c9d}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{cdb7a758-f6d5-4d54-8ad0-1866a0ed34eb}">
+		<property name="assetPath">
+			<value>Dog/397276__whisperbandnumber1__grunt1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.87655328798185939</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{614b51bd-04ce-4fe1-bc30-f58957540c9d}</destination>
+		</relationship>
+	</object>
+</objects>

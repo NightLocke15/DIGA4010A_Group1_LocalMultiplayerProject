@@ -234,8 +234,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../../Sounds-Fmod/Local-M/Local-M.fspro
-  sourceBankPath: ../../../../Sounds-Fmod/Local-M/Build
+  sourceProjectPath: ../Local-M/Local-M.fspro
+  sourceBankPath: ../Local-M/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
