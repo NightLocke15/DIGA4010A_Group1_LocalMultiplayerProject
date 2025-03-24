@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: 0c5a0643ed5ad7144820ed25907b6dc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4137558369265029100
+    second: TwoWin_0
+  - first:
+      213: 1480773675680372140
+    second: TwoWin_1
+  - first:
+      213: 5060163941481933948
+    second: TwoWin_2
+  - first:
+      213: -3372595417269387676
+    second: TwoWin_3
+  - first:
+      213: 1446800600418019499
+    second: TwoWin_4
+  - first:
+      213: -7945781013675115812
+    second: TwoWin_5
+  - first:
+      213: 7121603651075767707
+    second: TwoWin_6
+  - first:
+      213: -5477333202156068050
+    second: TwoWin_7
+  - first:
+      213: -1488533675563026868
+    second: TwoWin_8
+  - first:
+      213: -1824353093973097429
+    second: TwoWin_9
+  - first:
+      213: -1784473442702687341
+    second: TwoWin_10
+  - first:
+      213: 5643706055289878310
+    second: TwoWin_11
+  - first:
+      213: 5317833002926742097
+    second: TwoWin_12
+  - first:
+      213: 7790313895983227321
+    second: TwoWin_13
+  - first:
+      213: 8420125411430566596
+    second: TwoWin_14
+  - first:
+      213: -8280744404148476367
+    second: TwoWin_15
+  - first:
+      213: -8163533487558281779
+    second: TwoWin_16
+  - first:
+      213: -7310783190979584474
+    second: TwoWin_17
+  - first:
+      213: -1307931903896837894
+    second: TwoWin_18
+  - first:
+      213: 6016279522335351704
+    second: TwoWin_19
+  - first:
+      213: -1475877106461453022
+    second: TwoWin_20
+  - first:
+      213: -234260499982384185
+    second: TwoWin_21
+  - first:
+      213: 857389220877769510
+    second: TwoWin_22
+  - first:
+      213: -5626022252428075411
+    second: TwoWin_23
+  - first:
+      213: 3387820541374378487
+    second: TwoWin_24
+  - first:
+      213: 8723466808057311175
+    second: TwoWin_25
+  - first:
+      213: 3161013291025873307
+    second: TwoWin_26
+  - first:
+      213: -7800025355844502843
+    second: TwoWin_27
+  - first:
+      213: -4256425236033612859
+    second: TwoWin_28
+  - first:
+      213: 7239475510367901568
+    second: TwoWin_29
+  - first:
+      213: 5057323554082086188
+    second: TwoWin_30
+  - first:
+      213: 1488045409751065763
+    second: TwoWin_31
+  - first:
+      213: 923537825750112580
+    second: TwoWin_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TwoWin_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1179
+        width: 218
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410738ab5907496c0800000000000000
+      internalID: -4137558369265029100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1194
+        width: 217
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca59da300d3cc8410800000000000000
+      internalID: 1480773675680372140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_2
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1214
+        width: 266
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c654d7b40593640800000000000000
+      internalID: 5060163941481933948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_3
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 1219
+        width: 186
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e3c8636522231d0800000000000000
+      internalID: -3372595417269387676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_4
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1228
+        width: 190
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8ecb80b71141410800000000000000
+      internalID: 1446800600418019499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_5
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1218
+        width: 194
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdaf9d0444aeab190800000000000000
+      internalID: -7945781013675115812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_6
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 1213
+        width: 214
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9dfe7de9c405d260800000000000000
+      internalID: 7121603651075767707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_7
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 1196
+        width: 266
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23e809097a9cf3b0800000000000000
+      internalID: -5477333202156068050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_8
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 1216
+        width: 173
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c46fbd7328aa75be0800000000000000
+      internalID: -1488533675563026868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_9
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 1485
+        width: 20
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2449d0e6889ea6e0800000000000000
+      internalID: -1824353093973097429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_10
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1366
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3938690cbd64c37e0800000000000000
+      internalID: -1784473442702687341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_11
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 1377
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627364271c8725e40800000000000000
+      internalID: 5643706055289878310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_12
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 1021
+        width: 39
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a1c4ae0fcbcc940800000000000000
+      internalID: 5317833002926742097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_13
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1003
+        width: 174
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1aedaa631cc1c60800000000000000
+      internalID: 7790313895983227321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_14
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 769
+        width: 45
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca0f80337b4ad470800000000000000
+      internalID: 8420125411430566596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 580
+        width: 247
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1362de276d2e41d80800000000000000
+      internalID: -8280744404148476367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_16
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 608
+        width: 54
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5351a9b8d45be80800000000000000
+      internalID: -8163533487558281779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_17
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 602
+        width: 191
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ed3c70c61ea8a90800000000000000
+      internalID: -7310783190979584474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_18
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 632
+        width: 243
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af024d5fcda49dde0800000000000000
+      internalID: -1307931903896837894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_19
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 620
+        width: 198
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8936146995e1e7350800000000000000
+      internalID: 6016279522335351704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_20
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 606
+        width: 199
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225db395791a48be0800000000000000
+      internalID: -1475877106461453022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_21
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 633
+        width: 61
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c305a1015dbfbcf0800000000000000
+      internalID: -234260499982384185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_22
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 615
+        width: 243
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b1ba824fe06eb00800000000000000
+      internalID: 857389220877769510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_23
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 618
+        width: 182
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ed491c19a5ce1b0800000000000000
+      internalID: -5626022252428075411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_24
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 631
+        width: 149
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f1346b35d4f30f20800000000000000
+      internalID: 3387820541374378487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_25
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 135
+        width: 216
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfaa20d7daff0970800000000000000
+      internalID: 8723466808057311175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_26
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 131
+        width: 244
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99b2e527dc2edb20800000000000000
+      internalID: 3161013291025873307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_27
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 150
+        width: 498
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca39d1e34eb0c390800000000000000
+      internalID: -7800025355844502843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_28
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 157
+        width: 242
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c35531acc32ee4c0800000000000000
+      internalID: -4256425236033612859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_29
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 138
+        width: 233
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0875e9bce98c77460800000000000000
+      internalID: 7239475510367901568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_30
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 153
+        width: 231
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d57434af83f2640800000000000000
+      internalID: 5057323554082086188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_31
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 186
+        width: 252
+        height: 411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4ecd98a6996a410800000000000000
+      internalID: 1488045409751065763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwoWin_32
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 35
+        width: 134
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449d87862c011dc00800000000000000
+      internalID: 923537825750112580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TwoWin_0: -4137558369265029100
+      TwoWin_1: 1480773675680372140
+      TwoWin_10: -1784473442702687341
+      TwoWin_11: 5643706055289878310
+      TwoWin_12: 5317833002926742097
+      TwoWin_13: 7790313895983227321
+      TwoWin_14: 8420125411430566596
+      TwoWin_15: -8280744404148476367
+      TwoWin_16: -8163533487558281779
+      TwoWin_17: -7310783190979584474
+      TwoWin_18: -1307931903896837894
+      TwoWin_19: 6016279522335351704
+      TwoWin_2: 5060163941481933948
+      TwoWin_20: -1475877106461453022
+      TwoWin_21: -234260499982384185
+      TwoWin_22: 857389220877769510
+      TwoWin_23: -5626022252428075411
+      TwoWin_24: 3387820541374378487
+      TwoWin_25: 8723466808057311175
+      TwoWin_26: 3161013291025873307
+      TwoWin_27: -7800025355844502843
+      TwoWin_28: -4256425236033612859
+      TwoWin_29: 7239475510367901568
+      TwoWin_3: -3372595417269387676
+      TwoWin_30: 5057323554082086188
+      TwoWin_31: 1488045409751065763
+      TwoWin_32: 923537825750112580
+      TwoWin_4: 1446800600418019499
+      TwoWin_5: -7945781013675115812
+      TwoWin_6: 7121603651075767707
+      TwoWin_7: -5477333202156068050
+      TwoWin_8: -1488533675563026868
+      TwoWin_9: -1824353093973097429
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

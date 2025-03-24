@@ -1,13 +1,16 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
 {
     [SerializeField] private RoundsUI roundsUIScript;
     [SerializeField] private GameObject winScreen;
-    [SerializeField] private TextMeshProUGUI winText;
+    [SerializeField] private GameObject winTextOne;
+    [SerializeField] private GameObject winTextTwo;
     [SerializeField] private GameObject roundsScreen;
     [SerializeField] private GameObject upgradeScreen;
+    [SerializeField] private Button firtsButton;
 
     private void Start()
     {
@@ -19,16 +22,20 @@ public class WinScreen : MonoBehaviour
         if (roundsUIScript.playerOneWins >= 2)
         {
             winScreen.SetActive(true);
-            winText.text = "Player 1 Wins!";
+            winTextOne.SetActive(true);
+            winTextTwo.SetActive(false);
             roundsScreen.SetActive(false);
             upgradeScreen.SetActive(false);
+            firtsButton.Select();
         }
         else if (roundsUIScript.playerTwoWins >= 2)
         {
             winScreen.SetActive(true);
-            winText.text = "Player 2 Wins!";
+            winTextOne.SetActive(false);
+            winTextTwo.SetActive(true);
             roundsScreen.SetActive(false);
             upgradeScreen.SetActive(false);
+            firtsButton.Select();
         }
     }
 }

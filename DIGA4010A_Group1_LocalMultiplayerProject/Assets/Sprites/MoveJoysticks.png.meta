@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 22ce769a445c5ff4d90a00c0d4c8f819
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4501225469967236211
+    second: MoveJoysticks_0
+  - first:
+      213: 2306868622717904599
+    second: MoveJoysticks_1
+  - first:
+      213: -6859733724018928239
+    second: MoveJoysticks_2
+  - first:
+      213: -1535970273548156277
+    second: MoveJoysticks_3
+  - first:
+      213: -5309529411147856521
+    second: MoveJoysticks_4
+  - first:
+      213: 6344705622341834006
+    second: MoveJoysticks_5
+  - first:
+      213: -8222035770938977020
+    second: MoveJoysticks_6
+  - first:
+      213: 5258033503999019862
+    second: MoveJoysticks_7
+  - first:
+      213: -6885696054487138035
+    second: MoveJoysticks_8
+  - first:
+      213: 8573723837655631475
+    second: MoveJoysticks_9
+  - first:
+      213: 8813629552668190284
+    second: MoveJoysticks_10
+  - first:
+      213: -7688834159739269164
+    second: MoveJoysticks_11
+  - first:
+      213: -6469346304444310023
+    second: MoveJoysticks_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MoveJoysticks_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 22
+        width: 177
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c765767b0977e30800000000000000
+      internalID: 4501225469967236211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 16
+        width: 169
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d668904ac4a30020800000000000000
+      internalID: 2306868622717904599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_2
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 29
+        width: 159
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195951eb5845dc0a0800000000000000
+      internalID: -6859733724018928239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_3
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 27
+        width: 155
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b824a939c232faae0800000000000000
+      internalID: -1535970273548156277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_4
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 12
+        width: 168
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7750b04b123c056b0800000000000000
+      internalID: -5309529411147856521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_5
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 31
+        width: 139
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615db18d52cec0850800000000000000
+      internalID: 6344705622341834006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_6
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 31
+        width: 123
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40590ae470675ed80800000000000000
+      internalID: -8222035770938977020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_7
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 23
+        width: 177
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65bc6f61d9948f840800000000000000
+      internalID: 5258033503999019862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_8
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 30
+        width: 144
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d014cf0abe71170a0800000000000000
+      internalID: -6885696054487138035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_9
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 23
+        width: 37
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37643c1a76cfbf670800000000000000
+      internalID: 8573723837655631475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_10
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 15
+        width: 131
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c462caca16d405a70800000000000000
+      internalID: 8813629552668190284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_11
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 13
+        width: 138
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df0ad3a116cb4590800000000000000
+      internalID: -7688834159739269164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoveJoysticks_12
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 19
+        width: 172
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd5c9aefc34836a0800000000000000
+      internalID: -6469346304444310023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MoveJoysticks_0: 4501225469967236211
+      MoveJoysticks_1: 2306868622717904599
+      MoveJoysticks_10: 8813629552668190284
+      MoveJoysticks_11: -7688834159739269164
+      MoveJoysticks_12: -6469346304444310023
+      MoveJoysticks_2: -6859733724018928239
+      MoveJoysticks_3: -1535970273548156277
+      MoveJoysticks_4: -5309529411147856521
+      MoveJoysticks_5: 6344705622341834006
+      MoveJoysticks_6: -8222035770938977020
+      MoveJoysticks_7: 5258033503999019862
+      MoveJoysticks_8: -6885696054487138035
+      MoveJoysticks_9: 8573723837655631475
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

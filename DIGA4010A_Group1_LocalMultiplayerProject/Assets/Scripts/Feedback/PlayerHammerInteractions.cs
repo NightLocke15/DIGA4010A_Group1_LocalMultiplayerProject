@@ -34,7 +34,7 @@ public class PlayerHammerInteractions : MonoBehaviour
                     }
 
                     collision.collider.transform.GetChild(4).GetComponent<ParticleSystem>().Play();
-                    //collision.collider.transform.GetChild(0).GetComponent<HitFlash>().flash = true;
+                    collision.collider.transform.GetChild(0).GetComponent<HitFlash>().flash = true;
                 }
                 else { }
             }

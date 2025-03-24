@@ -20,7 +20,7 @@ public class PlayerCon_Script : MonoBehaviour
    private Rigidbody2D hammerHeadRb;
    [SerializeField] private Rigidbody2D playerBodyRb;
    // [SerializeField] private float moveSpeedx, defaultx, moveSpeedy, defaulty, speedAdjuster;
-   [SerializeField] private float moveSpeed = 5f;
+   public float moveSpeed = 5f;
    [SerializeField] private HammerCollider hammerColScript;
 
    [SerializeField] private float gravity = 9.81f;

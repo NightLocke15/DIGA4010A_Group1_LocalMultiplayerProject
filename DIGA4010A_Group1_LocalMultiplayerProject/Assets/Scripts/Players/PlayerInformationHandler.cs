@@ -110,8 +110,6 @@ public class PlayerInformationHandler : MonoBehaviour
             playerHealth.value += 1;
         }
 
-        //FreezeEffect();
-
         /* 
         Title: Dust Effect when Running & Jumping in Unity [Particle Effect]
         Author: Press Start
@@ -158,6 +156,21 @@ public class PlayerInformationHandler : MonoBehaviour
         {
             weaponTrail.emitting = false;
         }
+
+        if (higherKnockback == true)
+        {
+            HigherKnockBack();
+        }
+
+        if (fasterMovingWeapon == true)
+        {
+            FasterMovingWeapon();
+        }
+
+        if (higherHealth == true)
+        {
+            HigherHealth();
+        }
     }
 
     public void StartGame(InputAction.CallbackContext context)
@@ -198,7 +211,7 @@ public class PlayerInformationHandler : MonoBehaviour
     private void HigherKnockBack()
     {
         Knockback knockBackSpeed = this.gameObject.transform.GetChild(1).GetComponent<Knockback>();
-        knockBackSpeed.knockBackSpeed = 120;
+        knockBackSpeed.knockBackSpeed = 15;
     }
 
     private void HigherHealth()
@@ -208,7 +221,8 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void FasterMovingWeapon()
     {
-
+        PlayerCon_Script playerCon = this.gameObject.transform.GetChild(0).GetComponent<PlayerCon_Script>();
+        playerCon.moveSpeed = 7;
     }
 
     //Active
