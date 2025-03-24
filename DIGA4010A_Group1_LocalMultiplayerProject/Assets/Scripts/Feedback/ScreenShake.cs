@@ -14,7 +14,6 @@ public class ScreenShake : MonoBehaviour
 
     private GameObject playerOne;
     private GameObject playerTwo;
-
     
 
     private void Start()
