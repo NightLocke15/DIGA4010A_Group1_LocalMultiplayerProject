@@ -61,18 +61,21 @@ public class ScreenShake : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.transform.parent.name == "PlayerObjectOne")
+        if (collision.gameObject.transform.parent != null) //Divan added so that the bomb can hopefully exist in the scene
         {
-            if (shake == true)
+            if (collision.collider.transform.parent.name == "PlayerObjectOne")
             {
-                timer = true;
-            } 
-        }
-        else if (collision.collider.transform.parent.name == "PlayerObjectTwo")
-        {
-            if (shakeTwo == true)
+                if (shake == true)
+                {
+                    timer = true;
+                } 
+            }
+            else if (collision.collider.transform.parent.name == "PlayerObjectTwo")
             {
-                timer = true;
+                if (shakeTwo == true)
+                {
+                    timer = true;
+                }
             }
         }
     }

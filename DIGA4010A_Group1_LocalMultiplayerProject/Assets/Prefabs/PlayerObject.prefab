@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 5217988813018403565}
   - component: {fileID: 3072261525240535213}
   - component: {fileID: 96818520706597163}
+  - component: {fileID: 1408358034398507974}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -390,6 +391,7 @@ MonoBehaviour:
   currentSpeed: 0
   prevPos: {x: 0, y: 0}
   currentPos: {x: 0, y: 0}
+  activateAbility: {fileID: 1408358034398507974}
 --- !u!114 &8761512175131678725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,6 +473,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a10ce4d7-5142-4906-a7a9-3e79562955fa
     m_ActionName: 'Menu/Select[/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5716477992334461125}
+        m_TargetAssemblyTypeName: PlayerCon_Script, Assembly-CSharp
+        m_MethodName: ActivateAbility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e33d104b-002f-4d6a-a89f-41adfd0be119
+    m_ActionName: 'PlayerController/ActivateAbility[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
@@ -591,6 +609,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slam: {fileID: 1794583675579252368}
+--- !u!114 &1408358034398507974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862228161328596440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e4dc7e55b69e4468ee505bf29eea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePot: {fileID: 3438122892021310251}
+  theBomb: {fileID: 6984659141054112291, guid: c3dde1fe13f93834986a2327117a1962, type: 3}
+  forceY: 10
+  Check: {fileID: 0}
+  rb: {fileID: 8852404898414201316}
 --- !u!1 &2399478826667042169
 GameObject:
   m_ObjectHideFlags: 0
@@ -15933,8 +15968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherPlayer: {fileID: 0}
-  knockBackSpeed: 5
-  waitPeriodOne: 0
-  waitPeriodTwo: 0
-  knockedOne: 0
-  knockedTwo: 0
+  knockBackSpeed: 100
+  activateAbility: {fileID: 1408358034398507974}
+  playerConScript: {fileID: 5716477992334461125}

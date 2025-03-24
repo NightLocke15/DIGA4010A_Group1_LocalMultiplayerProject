@@ -192,6 +192,14 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Join
         m_Flags: 0
+      - m_Name: 
+        m_Id: c28a02d3-c38b-49fe-b57b-e483807f188d
+        m_Path: <Keyboard>/e
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: -1654692200621890270, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_PlayerPrefab: {fileID: 4222146023813045611, guid: 7ee6306850e853e458f764e2f49b0254, type: 3}

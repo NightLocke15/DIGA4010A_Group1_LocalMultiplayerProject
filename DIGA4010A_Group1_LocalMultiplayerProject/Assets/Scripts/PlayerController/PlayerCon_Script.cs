@@ -32,6 +32,8 @@ public class PlayerCon_Script : MonoBehaviour
 
    [SerializeField]
    private Vector2 prevPos, currentPos;
+   
+   [SerializeField] private ActivateAbility activateAbility;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -242,5 +244,15 @@ public class PlayerCon_Script : MonoBehaviour
         //    moveSpeedx = defaultx;
         //    moveSpeedy = defaulty;
         // }
+    }
+
+    public void ActivateAbility(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Bombed");
+            activateAbility.ActivateBomb();
+            
+        }
     }
 }
