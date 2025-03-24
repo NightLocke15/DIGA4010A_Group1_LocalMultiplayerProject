@@ -85,7 +85,8 @@ public class PlayerInformationHandler : MonoBehaviour
         Availability: https://discussions.unity.com/t/change-game-objects-name-when-in-runtime/443963/5
         Usage: How to change the name of an object in code
         */
-        //Change the name of the prefab to the relevant player name (one or two) when the prefabs are instantiated in.
+        //Change the name of the prefab to the relevant player name (one or two) when the prefabs are instantiated in, also change the sprites to the right ones, changing the
+        //health bar colours and the trail renderer colours
         if (GameObject.Find("PlayerObjectOne") == null)
         {
             this.gameObject.name = "PlayerObjectOne"; 
@@ -200,6 +201,7 @@ public class PlayerInformationHandler : MonoBehaviour
             emision.rateOverTime = 0;
         }
 
+        //Having the trail only appear when the player moves the weapon
         if (input == true)
         {
             weaponTrail.emitting = true;
@@ -209,6 +211,7 @@ public class PlayerInformationHandler : MonoBehaviour
             weaponTrail.emitting = false;
         }
 
+        //Upgrades
         if (higherKnockback == true)
         {
             HigherKnockBack();
@@ -244,7 +247,7 @@ public class PlayerInformationHandler : MonoBehaviour
     }
 
     //Passive
-    private void FreezeEffect()
+    private void FreezeEffect() //Not implemented yet
     {
         if (this.gameObject.name == "PlayerObjectOne")
         {
@@ -267,17 +270,20 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void HigherKnockBack()
     {
+        //Adding to the knockback speed
         Knockback knockBackSpeed = this.gameObject.transform.GetChild(1).GetComponent<Knockback>();
         knockBackSpeed.knockBackSpeed = 15;
     }
 
     private void HigherHealth()
     {
+        //Adding to the max health
         playerHealth.maxValue = 120;
     }
 
     private void FasterMovingWeapon()
     {
+        //Having the weapon move faster
         PlayerCon_Script playerCon = this.gameObject.transform.GetChild(0).GetComponent<PlayerCon_Script>();
         playerCon.moveSpeed = 7;
     }
@@ -300,6 +306,6 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void ChuckBomb()
     {
-        
+        //This was not necessary as of yet
     }
 }

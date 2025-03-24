@@ -30,6 +30,8 @@ public class PlayerManagerScript : MonoBehaviour
             SceneManager.LoadScene(2);
         }
 
+        //Sets up the scene in the waiting room
+
         if (playerOne == null || playerTwo == null)
         {
             joinText.SetActive(true);
@@ -57,6 +59,7 @@ public class PlayerManagerScript : MonoBehaviour
 
     private void SetPlayers()
     {
+        //Sets the players to the right object
         if (GameObject.Find("PlayerObjectOne") == null || GameObject.Find("PlayerObjectTwo") == null)
         {
 

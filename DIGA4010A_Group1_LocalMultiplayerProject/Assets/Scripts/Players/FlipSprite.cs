@@ -9,6 +9,7 @@ public class FlipSprite : MonoBehaviour
 
     private void Update()
     {
+        //Flip the sprite when they move in a certain direction
         if (this.transform.parent.GetComponent<Rigidbody2D>().linearVelocity.x > 0)
         {
             this.transform.eulerAngles = new Vector3(0, 0, 0);

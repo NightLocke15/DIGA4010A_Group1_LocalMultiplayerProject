@@ -14,7 +14,7 @@ public class PlayerHammerInteractions : MonoBehaviour
                 {
                     if (SceneManager.GetActiveScene().name == "StageZero")
                     {
-                        //Collision that effects the other player and makes their health less by a certain amount
+                        //Collision that effects the other player and makes their health less by a certain amount depending on the speed of the hammer
                         if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed < 15)
                         {
                             collision.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 5;

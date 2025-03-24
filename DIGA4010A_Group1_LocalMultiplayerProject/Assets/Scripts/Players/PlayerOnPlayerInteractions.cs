@@ -13,9 +13,9 @@ public class PlayerOnPlayerInteractions : MonoBehaviour
             {
                 if (collision.collider.transform.parent.name != this.gameObject.transform.parent.name)
                 {
-                    if (this.gameObject.transform.position.y > collision.collider.transform.position.y + 0.9f)
+                    if (this.gameObject.transform.position.y > collision.collider.transform.position.y + 1f)
                     {
-                        //Collision that effects the other player and makes their health less by a certain amount
+                        //Collision that effects the other player and makes their health less by a certain amount when the player lands on the other one
                         if (SceneManager.GetActiveScene().name == "StageZero")
                             {
                             if (this.gameObject.transform.parent.GetChild(0).GetComponent<PlayerCon_Script>().currentSpeed < 15)

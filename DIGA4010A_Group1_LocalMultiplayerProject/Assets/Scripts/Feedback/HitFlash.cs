@@ -13,6 +13,7 @@ public class HitFlash : MonoBehaviour
 
     private void Update()
     {
+        //Makes the Character flash red for a moment when hit by the weapon
         if (flash == true)
         {
             flashItem.SetActive(true);

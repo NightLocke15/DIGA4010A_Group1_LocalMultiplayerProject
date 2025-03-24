@@ -22,11 +22,14 @@ public class ScreenShake : MonoBehaviour
         playerOne = GameObject.Find("PlayerObjectOne");
         playerTwo = GameObject.Find("PlayerObjectTwo");
 
+        //Disable the shake so it does noot consistently shake
+
         cameraShake.GetComponent<CinemachineBasicMultiChannelPerlin>().enabled = false;
     }
 
     private void Update()
     {
+        //Make sure the shake only lasts for a moment
         if (timer == true)
         {
             time += Time.deltaTime;
@@ -42,6 +45,7 @@ public class ScreenShake : MonoBehaviour
             time = 0;
         }
         
+        //Activating the shake depending on if the player went above a certain height
         if (GameObject.Find("PlayerObjectOne") != null)
         {
             if (GameObject.Find("PlayerObjectOne").transform.GetChild(0).position.y >= 0)
@@ -61,6 +65,7 @@ public class ScreenShake : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Activate shake when hitting the ground
         if (collision.gameObject.transform.parent != null) //Divan added so that the bomb can hopefully exist in the scene
         {
             if (collision.collider.transform.parent.name == "PlayerObjectOne")

@@ -35,6 +35,8 @@ public class Knockback : MonoBehaviour
                     //    otherPlayer.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(-otherPlayer.transform.right * knockBackSpeed, ForceMode2D.Impulse);
                     //}
 
+                    //Inserts relevant information for the knockback, like determining how hard the knockback should be
+
                     activateAbility.TestKnockback(this.transform, playerConScript.currentSpeed);
             }
             

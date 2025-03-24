@@ -22,6 +22,7 @@ public class WinScreen : MonoBehaviour
         winScreen.SetActive(false);
     }
 
+    //Sets up the win screen with the relevant information
     private void Update()
     {
         if (roundsUIScript.playerOneWins >= 2)

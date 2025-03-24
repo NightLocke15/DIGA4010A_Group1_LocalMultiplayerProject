@@ -28,6 +28,7 @@ public class UIHandler : MonoBehaviour
             howToPlayPanel.SetActive(false);
             creditsPanel.SetActive(false);
 
+            //Destroying remnants from a previous round
             if (GameObject.Find("PlayerObjectOne") != null)
             {
                 Destroy(GameObject.Find("PlayerObjectOne"));
@@ -73,6 +74,13 @@ public class UIHandler : MonoBehaviour
         menuPanel.SetActive(false);
         creditsPanel.SetActive(true);
 
+        /*
+        Title: Controller and Keyboard Menu Navigation w/ Input System - Unity Tutorial
+        Author: samyam
+        Date: 20 Mar 2021
+        Availability: https://www.youtube.com/watch?v=Hn804Wgr3KE
+        Usage: How to get the right button to select at the right time  to set up controllers to move through UI
+        */
         backCButton.Select();
     }
 
@@ -83,6 +91,13 @@ public class UIHandler : MonoBehaviour
         creditsPanel.SetActive(false);
         menuPanel.SetActive(true);
 
+        /*
+        Title: Controller and Keyboard Menu Navigation w/ Input System - Unity Tutorial
+        Author: samyam
+        Date: 20 Mar 2021
+        Availability: https://www.youtube.com/watch?v=Hn804Wgr3KE
+        Usage: How to get the right button to select at the right time  to set up controllers to move through UI
+        */
         playButton.Select();
     }
 
@@ -95,6 +110,11 @@ public class UIHandler : MonoBehaviour
     public void Replay()
     {
         SceneManager.LoadScene(1); //Takes players back to waiting room
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
     /*public void Stages() //The players can choose game mode they would like to play on this game.
