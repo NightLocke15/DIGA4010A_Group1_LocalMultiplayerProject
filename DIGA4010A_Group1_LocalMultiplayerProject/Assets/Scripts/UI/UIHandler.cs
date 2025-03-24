@@ -27,6 +27,21 @@ public class UIHandler : MonoBehaviour
             menuPanel.SetActive(true);
             howToPlayPanel.SetActive(false);
             creditsPanel.SetActive(false);
+
+            if (GameObject.Find("PlayerObjectOne") != null)
+            {
+                Destroy(GameObject.Find("PlayerObjectOne"));
+            }
+
+            if (GameObject.Find("PlayerObjectTwo") != null)
+            {
+                Destroy(GameObject.Find("PlayerObjectTwo"));
+            }
+
+            if (GameObject.Find("PlayerManager") != null)
+            {
+                Destroy(GameObject.Find("PlayerManager"));
+            }
         }
         
     }
@@ -73,6 +88,7 @@ public class UIHandler : MonoBehaviour
 
     public void Menu()
     {
+
         SceneManager.LoadScene(0); //Takes players back to menu
     }
 

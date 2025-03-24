@@ -114,7 +114,7 @@ public class PlayerUpgrades : MonoBehaviour
 
             playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().defaultActionMap = "Menu";
 
-            eventSystymObject.GetComponent<InputSystemUIInputModule>().actionsAsset = playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().actions; //1. in references
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().actionsAsset = playerTwo.transform.GetChild(0).GetComponent<PlayerInput>().actions; 
 
             eventSystymObject.GetComponent<InputSystemUIInputModule>().move = InputActionReference.Create(playerTwo.transform.GetChild(0)
                 .GetComponent<PlayerInput>().actions.FindActionMap("Menu").FindAction("Navigation"));
@@ -185,6 +185,7 @@ public class PlayerUpgrades : MonoBehaviour
         if (playerOneUpgradePanel.activeSelf == true)
         {
             playerOne.GetComponent<PlayerInformationHandler>().higherHealth = true;
+            playerOne.GetComponent<PlayerInformationHandler>().playerHealth.maxValue = 120;
 
             //Sets the player back to starting positions
             playerOne.transform.GetChild(0).position = new Vector3(-6, 3);
@@ -212,6 +213,7 @@ public class PlayerUpgrades : MonoBehaviour
         else if (playerTwoUpgradePanel.activeSelf == true)
         {
             playerTwo.GetComponent<PlayerInformationHandler>().higherHealth = true;
+            playerTwo.GetComponent<PlayerInformationHandler>().playerHealth.maxValue = 120;
 
             //The same as above just for player two
             Debug.Log("Upgrade Chosen");

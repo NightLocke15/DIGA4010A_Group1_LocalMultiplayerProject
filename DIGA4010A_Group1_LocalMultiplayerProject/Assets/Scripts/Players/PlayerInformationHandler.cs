@@ -25,6 +25,11 @@ public class PlayerInformationHandler : MonoBehaviour
     [SerializeField] private SpriteRenderer rightArm;
     [SerializeField] private SpriteRenderer pot;
 
+    [SerializeField] private SpriteRenderer bodyFlash;
+    [SerializeField] private SpriteRenderer leftArmFlash;
+    [SerializeField] private SpriteRenderer rightArmFlash;
+    [SerializeField] private SpriteRenderer potFlash;
+
     [SerializeField] private Sprite deltonBody;
     [SerializeField] private Sprite deltonLeftArm;
     [SerializeField] private Sprite deltonRightArm;
@@ -91,7 +96,12 @@ public class PlayerInformationHandler : MonoBehaviour
             leftArm.sprite = deltonLeftArm;
             rightArm.sprite = deltonRightArm;
             pot.sprite = deltonPot;
-            
+
+            bodyFlash.sprite = deltonBody;
+            leftArmFlash.sprite = deltonLeftArm;
+            rightArmFlash.sprite = deltonRightArm;
+            potFlash.sprite = deltonPot;
+
             this.gameObject.transform.position = new Vector3(-18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
             playerHealth.transform.GetChild(1).GetChild(0).gameObject.GetComponent<Image>().color = new Color32(254, 134, 0, 255);
             this.transform.GetChild(1).GetComponent<TrailRenderer>().startColor = new Color32(254, 134, 0, 255);
@@ -107,7 +117,12 @@ public class PlayerInformationHandler : MonoBehaviour
             leftArm.sprite = gaspionLeftArm;
             rightArm.sprite = gaspionRightArm;
             pot.sprite = gaspionPot;
-            
+
+            bodyFlash.sprite = gaspionBody;
+            leftArmFlash.sprite = gaspionLeftArm;
+            rightArmFlash.sprite = gaspionRightArm;
+            potFlash.sprite = gaspionPot;
+
             this.gameObject.transform.position = new Vector3(18, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
             playerHealth.transform.GetChild(1).GetChild(0).gameObject.GetComponent<Image>().color = new Color32(0, 89, 255, 255);
             this.transform.GetChild(1).GetComponent<TrailRenderer>().startColor = new Color32(0, 89, 255, 255);
@@ -116,8 +131,7 @@ public class PlayerInformationHandler : MonoBehaviour
 
         dustParticles.Pause();
 
-        activateAbility = this.transform.GetChild(0).GetComponent<ActivateAbility>();
-        activateAbility.enabled = false;
+        
 
     }
 
@@ -260,7 +274,6 @@ public class PlayerInformationHandler : MonoBehaviour
     private void HigherHealth()
     {
         playerHealth.maxValue = 120;
-        playerHealth.value = playerHealth.maxValue;
     }
 
     private void FasterMovingWeapon()
@@ -287,6 +300,6 @@ public class PlayerInformationHandler : MonoBehaviour
 
     private void ChuckBomb()
     {
-        activateAbility.enabled = true;
+        
     }
 }

@@ -250,9 +250,11 @@ public class PlayerCon_Script : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Bombed");
-            activateAbility.ActivateBomb();
-            
+            if (this.transform.parent.GetComponent<PlayerInformationHandler>().chuckBomb == true)
+            {
+                Debug.Log("Bombed");
+                activateAbility.ActivateBomb();
+            }           
         }
     }
 }

@@ -57,6 +57,15 @@ public class BombBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+
+        if (explodeOnPlayer && other.gameObject.tag == "Player")
+        {
+            Debug.Log("Bombed");
+            other.collider.transform.parent.GetComponent<PlayerInformationHandler>().playerHealth.value -= 30;
+            activateAbility.TestKnockback(transform, speed);
+            BombGoesBoom();
+        }
+
         if (bouncedDetonation)
         {
             bouncesTillExplode -= 1;
@@ -66,18 +75,13 @@ public class BombBehaviour : MonoBehaviour
                 BombGoesBoom();
             }
         }
-
-        if (explodeOnPlayer && other.gameObject.tag == "Player")
-        {
-            other.collider.GetComponent<PlayerInformationHandler>().playerHealth.value -= 30;
-            activateAbility.TestKnockback(transform, speed);
-            BombGoesBoom();
-        }
+        
+       
     }
 
     private void BombGoesBoom()
     {
-       
+        
         Destroy(gameObject);
     }
 }

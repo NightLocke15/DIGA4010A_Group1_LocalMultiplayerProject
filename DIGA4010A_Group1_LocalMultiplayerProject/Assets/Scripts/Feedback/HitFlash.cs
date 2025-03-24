@@ -8,7 +8,6 @@ public class HitFlash : MonoBehaviour
 
     private void Start()
     {
-        flashItem = this.transform.GetChild(0).gameObject;
         flashItem.SetActive(false);
     }
 

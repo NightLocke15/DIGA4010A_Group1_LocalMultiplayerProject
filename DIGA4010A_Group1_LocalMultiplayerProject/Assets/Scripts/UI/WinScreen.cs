@@ -1,6 +1,9 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
+using System.Collections.Generic;
+using TMPro;
 
 public class WinScreen : MonoBehaviour
 {
@@ -11,6 +14,8 @@ public class WinScreen : MonoBehaviour
     [SerializeField] private GameObject roundsScreen;
     [SerializeField] private GameObject upgradeScreen;
     [SerializeField] private Button firtsButton;
+
+    [SerializeField] private GameObject eventSystymObject;
 
     private void Start()
     {
@@ -27,6 +32,23 @@ public class WinScreen : MonoBehaviour
             roundsScreen.SetActive(false);
             upgradeScreen.SetActive(false);
             firtsButton.Select();
+
+            /*
+           Title: How can multiple users control a single UI canvas using InputSystem?
+           Author: AlbertoVgdd
+           Date: May 2021
+           Availability: https://discussions.unity.com/t/how-can-multiple-users-control-a-single-ui-canvas-using-inputsystem/245974
+           Usage: Helped me figure out how to get one user only to use a certain part of the UI (Used this in else if as well)
+           */
+
+            //Makes the Event system use the action map attached to the relevant player
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().actionsAsset = GameObject.Find("PlayerObjectOne").transform.GetChild(0).GetComponent<PlayerInput>().actions;
+
+            //Sets the relevant actions to the eventsystem actions needed to traverse the UI, like moc=ving between the buttons and selecting them
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().move = InputActionReference.Create(GameObject.Find("PlayerObjectOne").transform.GetChild(0)
+                .GetComponent<PlayerInput>().actions.FindActionMap("Menu").FindAction("Navigation"));
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().submit = InputActionReference.Create(GameObject.Find("PlayerObjectOne").transform.GetChild(0)
+                .GetComponent<PlayerInput>().actions.FindActionMap("Menu").FindAction("Select"));
         }
         else if (roundsUIScript.playerTwoWins >= 2)
         {
@@ -36,6 +58,23 @@ public class WinScreen : MonoBehaviour
             roundsScreen.SetActive(false);
             upgradeScreen.SetActive(false);
             firtsButton.Select();
+
+            /*
+           Title: How can multiple users control a single UI canvas using InputSystem?
+           Author: AlbertoVgdd
+           Date: May 2021
+           Availability: https://discussions.unity.com/t/how-can-multiple-users-control-a-single-ui-canvas-using-inputsystem/245974
+           Usage: Helped me figure out how to get one user only to use a certain part of the UI (Used this in else if as well)
+           */
+
+            //Makes the Event system use the action map attached to the relevant player
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().actionsAsset = GameObject.Find("PlayerObjectOne").transform.GetChild(0).GetComponent<PlayerInput>().actions;
+
+            //Sets the relevant actions to the eventsystem actions needed to traverse the UI, like moc=ving between the buttons and selecting them
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().move = InputActionReference.Create(GameObject.Find("PlayerObjectOne").transform.GetChild(0)
+                .GetComponent<PlayerInput>().actions.FindActionMap("Menu").FindAction("Navigation"));
+            eventSystymObject.GetComponent<InputSystemUIInputModule>().submit = InputActionReference.Create(GameObject.Find("PlayerObjectOne").transform.GetChild(0)
+                .GetComponent<PlayerInput>().actions.FindActionMap("Menu").FindAction("Select"));
         }
     }
 }
